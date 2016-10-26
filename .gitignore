@@ -50,5 +50,6 @@ modules.xml
 *.ipr
 
 ## Database files:
-*.db
+*.mv
+*.trace
 
