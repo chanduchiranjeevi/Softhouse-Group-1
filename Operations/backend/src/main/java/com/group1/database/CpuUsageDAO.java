@@ -13,10 +13,10 @@ import java.util.List;
  */
 public interface CpuUsageDAO {
 
-    @SqlUpdate("CREATE TABLE IF NOT EXISTS cpuUsage(id int auto_increment primary key, percentageSystem varchar(8), percentageUser varchar(8))")
+    @SqlUpdate("CREATE TABLE IF NOT EXISTS cpuUsage(id int auto_increment primary key, hostName varchar(255), percentageCpu varchar(8))")
     void createTable();
 
-    @SqlUpdate("INSERT INTO `cpuUsage` VALUES(:id, :percentageSystem, :percentageUser)")
+    @SqlUpdate("INSERT INTO `cpuUsage` VALUES(:id, :hostName, :percentageCpu)")
     @GetGeneratedKeys
     int create(@BindBean CpuUsage cpuUsage);
 
@@ -29,7 +29,7 @@ public interface CpuUsageDAO {
     @SqlUpdate("DELETE FROM `cpuUsage` WHERE id = :id")
     int deleteBy(@Bind("id") int id);
 
-    @SqlUpdate("UPDATE `cpuUsage` SET percentageSystem = :percentageSystem, percentageUser = :percentageUser")
+    @SqlUpdate("UPDATE `cpuUsage` SET hostName = :hostName, percentageCpu = :percentageCpu")
     Integer update(@BindBean CpuUsage cpuUsage);
 
 }

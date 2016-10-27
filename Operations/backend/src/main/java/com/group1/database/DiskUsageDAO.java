@@ -14,10 +14,10 @@ import java.util.List;
  */
 public interface DiskUsageDAO {
 
-    @SqlUpdate("CREATE TABLE IF NOT EXISTS diskUsage(id int auto_increment primary key, kbDiskAvailable varchar(255), kbDiskUsed varchar(255), percentageDiskUsed varchar(8))")
+    @SqlUpdate("CREATE TABLE IF NOT EXISTS diskUsage(id int auto_increment primary key, hostName varchar(255), kbDiskAvailable varchar(255), kbDiskUsed varchar(255))")
     void createTable();
 
-    @SqlUpdate("INSERT INTO `diskUsage` VALUES(:id, :kbDiskAvailable, :kbDiskUsed, :percentageDiskUsed)")
+    @SqlUpdate("INSERT INTO `diskUsage` VALUES(:id, :hostName, :kbDiskAvailable, :kbDiskUsed")
     @GetGeneratedKeys
     int create(@BindBean DiskUsage diskUsage);
 
@@ -30,7 +30,7 @@ public interface DiskUsageDAO {
     @SqlUpdate("DELETE FROM `diskUsage` WHERE id = :id")
     int deleteBy(@Bind("id") int id);
 
-    @SqlUpdate("UPDATE `serverStatistics` SET percentageSystem = :percentageSystem, percentageUser = :percentageUser, kbMemoryFree = :kbMemoryFree, kbMemoryUsed = :kbMemoryUsed, percentageMemoryUsed = :percentageMemoryUsed, kbDiskAvailable = :kbDiskAvailable, kbDiskUsed = :kbDiskUsed, percentageDiskUsed = :percentageDiskUsed")
+    @SqlUpdate("UPDATE `diskUsage` SET hostName = :hostName, kbDiskAvailable = :kbDiskAvailable, kbDiskUsed = :kbDiskUsed")
     Integer update(@BindBean DiskUsage diskUsage);
 
 }

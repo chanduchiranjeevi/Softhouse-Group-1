@@ -9,6 +9,13 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class DiskUsage {
 
     @JsonProperty
+    private Integer id;
+
+    @JsonProperty
+    @NotEmpty
+    private String hostName;
+
+    @JsonProperty
     @NotEmpty
     private String kbDiskAvailable;
 
@@ -16,14 +23,29 @@ public class DiskUsage {
     @NotEmpty
     private String kbDiskUsed;
 
-    @JsonProperty
-    @NotEmpty
-    private String percentageDiskUsed;
+    public DiskUsage() {}
 
-    public DiskUsage(String kbDiskAvailable, String kbDiskUsed, String percentageDiskUsed) {
+    public DiskUsage(Integer id, String hostName, String kbDiskAvailable, String kbDiskUsed) {
+        this.id = id;
+        this.hostName = hostName;
         this.kbDiskAvailable = kbDiskAvailable;
         this.kbDiskUsed = kbDiskUsed;
-        this.percentageDiskUsed = percentageDiskUsed;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getHostName() {
+        return hostName;
+    }
+
+    public void setHostName(String hostName) {
+        this.hostName = hostName;
     }
 
     public String getKbDiskAvailable() {
@@ -40,14 +62,6 @@ public class DiskUsage {
 
     public void setKbDiskUsed(String kbDiskUsed) {
         this.kbDiskUsed = kbDiskUsed;
-    }
-
-    public String getPercentageDiskUsed() {
-        return percentageDiskUsed;
-    }
-
-    public void setPercentageDiskUsed(String percentageDiskUsed) {
-        this.percentageDiskUsed = percentageDiskUsed;
     }
 
 }

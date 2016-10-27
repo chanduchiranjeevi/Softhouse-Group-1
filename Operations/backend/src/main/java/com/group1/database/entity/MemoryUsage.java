@@ -9,6 +9,13 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class MemoryUsage {
 
     @JsonProperty
+    private Integer id;
+
+    @JsonProperty
+    @NotEmpty
+    private String hostName;
+
+    @JsonProperty
     @NotEmpty
     private String kbMemoryFree;
 
@@ -16,14 +23,30 @@ public class MemoryUsage {
     @NotEmpty
     private String kbMemoryUsed;
 
-    @JsonProperty
-    @NotEmpty
-    private String percentageMemoryUsed;
+    public MemoryUsage() {}
 
-    public MemoryUsage(String kbMemoryFree, String kbMemoryUsed, String percentageMemoryUsed) {
+
+    public MemoryUsage(Integer id, String hostName, String kbMemoryFree, String kbMemoryUsed) {
+        this.id = id;
+        this.hostName = hostName;
         this.kbMemoryFree = kbMemoryFree;
         this.kbMemoryUsed = kbMemoryUsed;
-        this.percentageMemoryUsed = percentageMemoryUsed;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getHostName() {
+        return hostName;
+    }
+
+    public void setHostName(String hostName) {
+        this.hostName = hostName;
     }
 
     public String getKbMemoryFree() {
@@ -40,14 +63,6 @@ public class MemoryUsage {
 
     public void setKbMemoryUsed(String kbMemoryUsed) {
         this.kbMemoryUsed = kbMemoryUsed;
-    }
-
-    public String getPercentageMemoryUsed() {
-        return percentageMemoryUsed;
-    }
-
-    public void setPercentageMemoryUsed(String percentageMemoryUsed) {
-        this.percentageMemoryUsed = percentageMemoryUsed;
     }
 
 }

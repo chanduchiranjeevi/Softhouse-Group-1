@@ -10,7 +10,7 @@ apply plugin: 'java'
 apply plugin: 'application'
 sourceCompatibility = 1.8
 
-mainClassName = "com.group1.ServerOperationsApplication"
+mainClassName = "com.group1.ServerMetricsApplication"
 
 repositories {
     mavenCentral()
