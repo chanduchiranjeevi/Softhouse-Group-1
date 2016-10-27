@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e696d584-6c65-41d6-899d-828d9ff2235c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/group1/database/entity/serverStatistics.java" afterPath="$PROJECT_DIR$/src/main/java/com/group1/database/entity/serverStatistics.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/group1/database/entity/serverStatistics.java" afterPath="" />
     </list>
     <ignored path="Group1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1027,15 +1026,15 @@
       <workItem from="1477471792828" duration="5475000" />
       <workItem from="1477502234599" duration="2248000" />
       <workItem from="1477507760885" duration="2397000" />
-      <workItem from="1477511328839" duration="3291000" />
+      <workItem from="1477511328839" duration="3884000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15204000" />
+    <option name="totallyTimeSpent" value="15797000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1092,10 +1091,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setPercentageMemoryUsed#0;class#ServerStatistics#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1121,10 +1117,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setPercentageMemoryUsed#0;class#ServerStatistics#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1162,10 +1155,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
           <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setPercentageMemoryUsed#0;class#ServerStatistics#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
