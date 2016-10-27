@@ -7,7 +7,7 @@ package com.group1.database.entity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.validator.constraints.NotEmpty;
 
-public class serverStatistics {
+public class ServerStatistics {
 
     @JsonProperty
     private Integer id;
@@ -34,27 +34,27 @@ public class serverStatistics {
 
     @JsonProperty
     @NotEmpty
-    private String diskUsed;
+    private String diskAvailable;
 
     @JsonProperty
     @NotEmpty
-    private String diskAvailable;
+    private String diskUsed;
 
     @JsonProperty
     @NotEmpty
     private String percentageDiskUsed;
 
-    public serverStatistics() {}
+    public ServerStatistics() {}
 
-    public serverStatistics(Integer id, String cpuUsageSystem, String cpuUsageUser, String kbMemoryFree, String kbMemoryUsed, String percentageMemoryUsed, String diskAvailable, String diskUsed, String percentageDiskUsed) {
+    public ServerStatistics(Integer id, String cpuUsageSystem, String cpuUsageUser, String kbMemoryFree, String kbMemoryUsed, String percentageMemoryUsed, String diskAvailable, String diskUsed, String percentageDiskUsed) {
         this.id = id;
         this.cpuUsageSystem = cpuUsageSystem;
         this.cpuUsageUser = cpuUsageUser;
         this.kbMemoryFree = kbMemoryFree;
         this.kbMemoryUsed = kbMemoryUsed;
         this.percentageMemoryUsed = percentageMemoryUsed;
-        this.diskUsed = diskUsed;
         this.diskAvailable = diskAvailable;
+        this.diskUsed = diskUsed;
         this.percentageDiskUsed = percentageDiskUsed;
     }
 
