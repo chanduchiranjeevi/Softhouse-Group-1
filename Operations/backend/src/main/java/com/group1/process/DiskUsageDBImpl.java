@@ -45,7 +45,7 @@ public class DiskUsageDBImpl implements DiskUsageProcess {
     public DiskUsage find(Integer id) throws NotFoundException {
         return Optional
                 .ofNullable(this.diskUsageDAO.findBy(id))
-                .orElseThrow(() -> new NotFoundException("CPU usage stats do not exist"));
+                .orElseThrow(() -> new NotFoundException("Disk usage stats do not exist"));
     }
 
     @Override
