@@ -45,7 +45,7 @@ public class MemoryUsageDBImpl implements MemoryUsageProcess {
     public MemoryUsage find(Integer id) throws NotFoundException {
         return Optional
                 .ofNullable(this.memoryUsageDAO.findBy(id))
-                .orElseThrow(() -> new NotFoundException("CPU usage stats do not exist"));
+                .orElseThrow(() -> new NotFoundException("Memory usage stats do not exist"));
     }
 
     @Override
