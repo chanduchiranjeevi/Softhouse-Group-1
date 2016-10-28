@@ -8,7 +8,6 @@ import java.util.List;
 
 @RegisterMapperFactory(BeanMapperFactory.class)
 
-
 /**
  * Created by sriku on 2016-10-27.
  */
@@ -17,7 +16,7 @@ public interface DiskUsageDAO {
     @SqlUpdate("CREATE TABLE IF NOT EXISTS diskUsage(id int auto_increment primary key, hostName varchar(255), kbDiskAvailable varchar(255), kbDiskUsed varchar(255))")
     void createTable();
 
-    @SqlUpdate("INSERT INTO `diskUsage` VALUES(:id, :hostName, :kbDiskAvailable, :kbDiskUsed")
+    @SqlUpdate("INSERT INTO `diskUsage` VALUES(:id, :hostName, :kbDiskAvailable, :kbDiskUsed)")
     @GetGeneratedKeys
     int create(@BindBean DiskUsage diskUsage);
 
