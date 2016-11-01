@@ -8,6 +8,7 @@ import java.util.List;
 /**
  * Created by sriku on 2016-10-27.
  */
+
 public interface CpuUsageProcess {
     List<CpuUsage> list();
     CpuUsage create(CpuUsage cpuUsage);

@@ -1,11 +1,15 @@
 package com.group1.database.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.sun.istack.internal.NotNull;
 import org.hibernate.validator.constraints.NotEmpty;
+
+import java.util.Date;
 
 /**
  * Created by sriku on 2016-10-27.
  */
+
 public class MemoryUsage {
 
     @JsonProperty
@@ -16,18 +20,21 @@ public class MemoryUsage {
     private String hostName;
 
     @JsonProperty
-    @NotEmpty
-    private String kbMemoryFree;
+    private Date time;
 
     @JsonProperty
-    @NotEmpty
-    private String kbMemoryUsed;
+    @NotNull
+    private Integer kbMemoryFree;
+
+    @JsonProperty
+    @NotNull
+    private Integer kbMemoryUsed;
 
     public MemoryUsage() {}
 
-
-    public MemoryUsage(Integer id, String hostName, String kbMemoryFree, String kbMemoryUsed) {
+    public MemoryUsage(Integer id, String hostName, Date time, Integer kbMemoryFree, Integer kbMemoryUsed) {
         this.id = id;
+        this.time = time;
         this.hostName = hostName;
         this.kbMemoryFree = kbMemoryFree;
         this.kbMemoryUsed = kbMemoryUsed;
@@ -49,19 +56,27 @@ public class MemoryUsage {
         this.hostName = hostName;
     }
 
-    public String getKbMemoryFree() {
+    public Date getTime() {
+        return time;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
+    }
+
+    public Integer getKbMemoryFree() {
         return kbMemoryFree;
     }
 
-    public void setKbMemoryFree(String kbMemoryFree) {
+    public void setKbMemoryFree(Integer kbMemoryFree) {
         this.kbMemoryFree = kbMemoryFree;
     }
 
-    public String getKbMemoryUsed() {
+    public Integer getKbMemoryUsed() {
         return kbMemoryUsed;
     }
 
-    public void setKbMemoryUsed(String kbMemoryUsed) {
+    public void setKbMemoryUsed(Integer kbMemoryUsed) {
         this.kbMemoryUsed = kbMemoryUsed;
     }
 

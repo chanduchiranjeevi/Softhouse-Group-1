@@ -9,6 +9,7 @@ import java.util.List;
 /**
  * Created by sriku on 2016-10-27.
  */
+
 public interface MemoryUsageProcess {
     List<MemoryUsage> list();
     MemoryUsage create(MemoryUsage memoryUsage);

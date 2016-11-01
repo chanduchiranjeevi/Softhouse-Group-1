@@ -10,6 +10,8 @@ import java.util.Optional;
 /**
  * Created by sriku on 2016-10-27.
  */
+
+
 public class CpuUsageDBImpl implements CpuUsageProcess {
     private CpuUsageDAO cpuUsageDAO;
 
@@ -31,6 +33,7 @@ public class CpuUsageDBImpl implements CpuUsageProcess {
     public CpuUsage update(Integer id, CpuUsage updatedCpuUsage) throws NotFoundException {
         CpuUsage cpuUsage = this.find(id);
 
+        cpuUsage.setTime(updatedCpuUsage.getTime());
         cpuUsage.setHostName(updatedCpuUsage.getHostName());
         cpuUsage.setPercentageCpu(updatedCpuUsage.getPercentageCpu());
 

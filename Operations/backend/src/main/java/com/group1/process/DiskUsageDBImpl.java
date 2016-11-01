@@ -32,6 +32,7 @@ public class DiskUsageDBImpl implements DiskUsageProcess {
     public DiskUsage update(Integer id, DiskUsage updatedDiskUsage) throws NotFoundException {
         DiskUsage diskUsage = this.find(id);
 
+        diskUsage.setTime(updatedDiskUsage.getTime());
         diskUsage.setHostName(updatedDiskUsage.getHostName());
         diskUsage.setKbDiskAvailable(updatedDiskUsage.getKbDiskAvailable());
         diskUsage.setKbDiskUsed(updatedDiskUsage.getKbDiskUsed());

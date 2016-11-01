@@ -1,11 +1,15 @@
 package com.group1.database.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.sun.istack.internal.NotNull;
 import org.hibernate.validator.constraints.NotEmpty;
+
+import java.util.Date;
 
 /**
  * Created by sriku on 2016-10-27.
  */
+
 public class CpuUsage {
 
     @JsonProperty
@@ -16,13 +20,17 @@ public class CpuUsage {
     private String hostName;
 
     @JsonProperty
-    @NotEmpty
-    private String percentageCpu;
+    private Date time;
+
+    @JsonProperty
+    @NotNull
+    private Float percentageCpu;
 
     public CpuUsage(){}
 
-    public CpuUsage(Integer id, String hostName, String percentageCpu) {
+    public CpuUsage(Integer id, String hostName, Date time, Float percentageCpu) {
         this.id = id;
+        this.time = time;
         this.hostName = hostName;
         this.percentageCpu = percentageCpu;
     }
@@ -43,11 +51,19 @@ public class CpuUsage {
         this.hostName = hostName;
     }
 
-    public String getPercentageCpu() {
+    public Date getTime() {
+        return time;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
+    }
+
+    public Float getPercentageCpu() {
         return percentageCpu;
     }
 
-    public void setPercentageCpu(String percentageCpu) {
+    public void setPercentageCpu(Float percentageCpu) {
         this.percentageCpu = percentageCpu;
     }
 }

@@ -10,6 +10,7 @@ import java.util.Optional;
 /**
  * Created by sriku on 2016-10-27.
  */
+
 public class MemoryUsageDBImpl implements MemoryUsageProcess {
 
     private MemoryUsageDAO memoryUsageDAO;
@@ -32,6 +33,7 @@ public class MemoryUsageDBImpl implements MemoryUsageProcess {
     public MemoryUsage update(Integer id, MemoryUsage updatedMemoryUsage) throws NotFoundException {
         MemoryUsage memoryUsage = this.find(id);
 
+        memoryUsage.setTime(updatedMemoryUsage.getTime());
         memoryUsage.setHostName(updatedMemoryUsage.getHostName());
         memoryUsage.setKbMemoryFree(updatedMemoryUsage.getKbMemoryFree());
         memoryUsage.setKbMemoryUsed(updatedMemoryUsage.getKbMemoryUsed());
