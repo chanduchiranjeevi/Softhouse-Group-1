@@ -20,7 +20,9 @@ kbMemoryFree=$(MEMORYFREE)
 echo $kbMemoryFree
 kbMemoryUsed=$(MEMORYUSED)
 echo $kbMemoryUsed
-JSON="{\"hostName\":\"$HOST\", \"kbMemoryFree\":\"$kbMemoryFree\", \"kbMemoryUsed\":\"$kbMemoryUsed\"}"
+time=$(date +%s%3N)
+echo $time
+JSON="{\"hostName\":\"$HOST\", \"time\":$time, \"kbMemoryFree\":$kbMemoryFree, \"kbMemoryUsed\":$kbMemoryUsed}"
 
 
 
