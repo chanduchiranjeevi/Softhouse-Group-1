@@ -43,11 +43,11 @@ public class CpuUsage {
         this.hostName = hostName;
     }
 
-    public Double getPercentageCpu() {
+    public String getPercentageCpu() {
         return percentageCpu;
     }
 
-    public void setPercentageCpu(Double percentageCpu) {
+    public void setPercentageCpu(String percentageCpu) {
         this.percentageCpu = percentageCpu;
     }
 }
