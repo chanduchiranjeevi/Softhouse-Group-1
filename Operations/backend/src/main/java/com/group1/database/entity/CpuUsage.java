@@ -17,11 +17,11 @@ public class CpuUsage {
 
     @JsonProperty
     @NotEmpty
-    private Double percentageCpu;
+    private String percentageCpu;
 
     public CpuUsage(){}
 
-    public CpuUsage(Integer id, String hostName, Double percentageCpu) {
+    public CpuUsage(Integer id, String hostName, String percentageCpu) {
         this.id = id;
         this.hostName = hostName;
         this.percentageCpu = percentageCpu;
