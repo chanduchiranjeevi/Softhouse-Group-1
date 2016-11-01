@@ -17,11 +17,11 @@ public class CpuUsage {
 
     @JsonProperty
     @NotEmpty
-    private String percentageCpu;
+    private Double percentageCpu;
 
     public CpuUsage(){}
 
-    public CpuUsage(Integer id, String hostName, String percentageCpu) {
+    public CpuUsage(Integer id, String hostName, Double percentageCpu) {
         this.id = id;
         this.hostName = hostName;
         this.percentageCpu = percentageCpu;
@@ -43,11 +43,11 @@ public class CpuUsage {
         this.hostName = hostName;
     }
 
-    public String getPercentageCpu() {
+    public Double getPercentageCpu() {
         return percentageCpu;
     }
 
-    public void setPercentageCpu(String percentageCpu) {
+    public void setPercentageCpu(Double percentageCpu) {
         this.percentageCpu = percentageCpu;
     }
 }
