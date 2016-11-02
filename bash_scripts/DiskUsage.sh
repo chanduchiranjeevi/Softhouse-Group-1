@@ -20,8 +20,12 @@ DISKUSED;
 HOST=$(hostname)
 kbDiskAvailable=$(DISKAVAILABLE)
 kbDiskUsed=$(DISKUSED)
+time=$(date +%s%3N)
+echo $time
 
-JSON="{\"hostName\":\"$HOST\", \"kbDiskAvailable\":\"$kbDiskAvailable\", \"kbDiskUsed\":\"$kbDiskUsed\"}"
+JSON="{\"hostName\":\"$HOST\", \"time\":$time, \"kbDiskAvailable\":$kbDiskAvailable, \"kbDiskUsed\":$kbDiskUsed}"
 
 
-curl -X POST -H 'Content-Type: application/json' --data-ascii "$JSON" http://192.168.11.192:8080/api/Metrics/DiskUsage
+curl -X POST -H 'Content-Type: application/json' --data-ascii "$JSON" http://$1:8080/api/Metrics/DiskUsage
+
+exit 0

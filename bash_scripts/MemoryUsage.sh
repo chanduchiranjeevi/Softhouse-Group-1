@@ -20,8 +20,12 @@ kbMemoryFree=$(MEMORYFREE)
 echo $kbMemoryFree
 kbMemoryUsed=$(MEMORYUSED)
 echo $kbMemoryUsed
-JSON="{\"hostName\":\"$HOST\", \"kbMemoryFree\":\"$kbMemoryFree\", \"kbMemoryUsed\":\"$kbMemoryUsed\"}"
+time=$(date +%s%3N)
+echo $time
+JSON="{\"hostName\":\"$HOST\", \"time\":$time, \"kbMemoryFree\":$kbMemoryFree, \"kbMemoryUsed\":$kbMemoryUsed}"
 
 
 
-curl -X POST -H 'Content-Type: application/json' --data-ascii "$JSON" http://192.168.11.192:8080/api/Metrics/MemoryUsage
+curl -X POST -H 'Content-Type: application/json' --data-ascii "$JSON" http://$1:8080/api/Metrics/MemoryUsage
+
+exit 0
