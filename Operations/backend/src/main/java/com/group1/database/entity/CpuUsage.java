@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.sun.istack.internal.NotNull;
 import org.hibernate.validator.constraints.NotEmpty;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 /**
  * Created by sriku on 2016-10-27.
@@ -20,7 +20,7 @@ public class CpuUsage {
     private String hostName;
 
     @JsonProperty
-    private Date time;
+    private Timestamp time;
 
     @JsonProperty
     @NotNull
@@ -28,7 +28,7 @@ public class CpuUsage {
 
     public CpuUsage(){}
 
-    public CpuUsage(Integer id, String hostName, Date time, Float percentageCpu) {
+    public CpuUsage(Integer id, String hostName, Timestamp time, Float percentageCpu) {
         this.id = id;
         this.time = time;
         this.hostName = hostName;
@@ -51,11 +51,11 @@ public class CpuUsage {
         this.hostName = hostName;
     }
 
-    public Date getTime() {
+    public Timestamp getTime() {
         return time;
     }
 
-    public void setTime(Date time) {
+    public void setTime(Timestamp time) {
         this.time = time;
     }
 

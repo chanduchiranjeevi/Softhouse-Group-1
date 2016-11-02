@@ -13,7 +13,7 @@ import java.util.List;
  */
 public interface CpuUsageDAO {
 
-    @SqlUpdate("CREATE TABLE IF NOT EXISTS cpuUsage(id int auto_increment primary key, hostName varchar(255), time date, percentageCpu float)")
+    @SqlUpdate("CREATE TABLE IF NOT EXISTS cpuUsage(id int auto_increment primary key, hostName varchar(255), time timestamp, percentageCpu float)")
     void createTable();
 
     @SqlUpdate("INSERT INTO `cpuUsage` VALUES(:id, :hostName, :time, :percentageCpu)")

@@ -13,7 +13,7 @@ import java.util.List;
  */
 public interface MemoryUsageDAO {
 
-    @SqlUpdate("CREATE TABLE IF NOT EXISTS memoryUsage(id int auto_increment primary key, hostName varchar(255), time date, kbMemoryFree int, kbMemoryUsed int)")
+    @SqlUpdate("CREATE TABLE IF NOT EXISTS memoryUsage(id int auto_increment primary key, hostName varchar(255), time timestamp, kbMemoryFree int, kbMemoryUsed int)")
     void createTable();
 
     @SqlUpdate("INSERT INTO `memoryUsage` VALUES(:id, :hostName, :time, :kbMemoryFree, :kbMemoryUsed)")
