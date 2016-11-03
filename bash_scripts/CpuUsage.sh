@@ -14,6 +14,11 @@ HOST=$(hostname)
 time=$(date +%s%3N)
 echo $time
 percentageCpu=$(CPU)
+<<<<<<< HEAD
+=======
+
+JSON="{\"hostName\":\"$HOST\", \"time\":$time, \"percentageCpu\":$percentageCpu}"
+>>>>>>> Development
 
 JSON="{\"hostName\":\"$HOST\", \"time\":$time, \"percentageCpu\":$percentageCpu}"
 

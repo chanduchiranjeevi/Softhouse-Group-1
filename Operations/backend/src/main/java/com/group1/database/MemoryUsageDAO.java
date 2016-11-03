@@ -13,10 +13,10 @@ import java.util.List;
  */
 public interface MemoryUsageDAO {
 
-    @SqlUpdate("CREATE TABLE IF NOT EXISTS memoryUsage(id int auto_increment primary key, hostName varchar(255), kbMemoryFree varchar(255), kbMemoryUsed varchar(255))")
+    @SqlUpdate("CREATE TABLE IF NOT EXISTS memoryUsage(id int auto_increment primary key, hostName varchar(255), time timestamp, kbMemoryFree int, kbMemoryUsed int)")
     void createTable();
 
-    @SqlUpdate("INSERT INTO `memoryUsage` VALUES(:id, :hostName, :kbMemoryFree, :kbMemoryUsed)")
+    @SqlUpdate("INSERT INTO `memoryUsage` VALUES(:id, :hostName, :time, :kbMemoryFree, :kbMemoryUsed)")
     @GetGeneratedKeys
     int create(@BindBean MemoryUsage memoryUsage);
 
@@ -29,7 +29,7 @@ public interface MemoryUsageDAO {
     @SqlUpdate("DELETE FROM `memoryUsage` WHERE id = :id")
     int deleteBy(@Bind("id") int id);
 
-    @SqlUpdate("UPDATE `memoryUsage` SET hostName = :hostName, kbMemoryFree = :kbMemoryFree, kbMemoryUsed = :kbMemoryUsed")
+    @SqlUpdate("UPDATE `memoryUsage` SET hostName = :hostName, time = :time, kbMemoryFree = :kbMemoryFree, kbMemoryUsed = :kbMemoryUsed")
     Integer update(@BindBean MemoryUsage memoryUsage);
 
 }
