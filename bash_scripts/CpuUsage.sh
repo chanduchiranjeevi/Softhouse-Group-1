@@ -14,11 +14,15 @@ HOST=$(hostname)
 time=$(date +%s%3N)
 echo $time
 percentageCpu=$(CPU)
+<<<<<<< HEAD
+=======
+
+JSON="{\"hostName\":\"$HOST\", \"time\":$time, \"percentageCpu\":$percentageCpu}"
+>>>>>>> Development
 
 JSON="{\"hostName\":\"$HOST\", \"time\":$time, \"percentageCpu\":$percentageCpu}"
 
 
-curl -X POST -H 'Content-Type: application/json' --data-ascii "$JSON" http://192.168.11.192:8080/api/Metrics/CpuUsage
+curl -X POST -H 'Content-Type: application/json' --data-ascii "$JSON" http://$1:8080/api/Metrics/CpuUsage
 
-
-
+exit 0

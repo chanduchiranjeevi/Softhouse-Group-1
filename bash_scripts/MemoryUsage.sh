@@ -26,4 +26,6 @@ JSON="{\"hostName\":\"$HOST\", \"time\":$time, \"kbMemoryFree\":$kbMemoryFree, \
 
 
 
-curl -X POST -H 'Content-Type: application/json' --data-ascii "$JSON" http://192.168.11.192:8080/api/Metrics/MemoryUsage
+curl -X POST -H 'Content-Type: application/json' --data-ascii "$JSON" http://$1:8080/api/Metrics/MemoryUsage
+
+exit 0
