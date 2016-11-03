@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.sun.istack.internal.NotNull;
 import org.hibernate.validator.constraints.NotEmpty;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 /**
  * Created by sriku on 2016-10-27.
@@ -20,7 +20,8 @@ public class MemoryUsage {
     private String hostName;
 
     @JsonProperty
-    private Timestamp time;
+    @NotNull
+    private Date time;
 
     @JsonProperty
     @NotNull
@@ -32,7 +33,7 @@ public class MemoryUsage {
 
     public MemoryUsage() {}
 
-    public MemoryUsage(Integer id, String hostName, Timestamp time, Integer kbMemoryFree, Integer kbMemoryUsed) {
+    public MemoryUsage(Integer id, String hostName, Date time, Integer kbMemoryFree, Integer kbMemoryUsed) {
         this.id = id;
         this.time = time;
         this.hostName = hostName;
@@ -56,11 +57,11 @@ public class MemoryUsage {
         this.hostName = hostName;
     }
 
-    public Timestamp getTime() {
+    public Date getTime() {
         return time;
     }
 
-    public void setTime(Timestamp time) {
+    public void setTime(Date time) {
         this.time = time;
     }
 
