@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 MEMORYFREE()
 {
 kbMemoryFree="$(sar -r 1 1 | awk '{print $2}' | awk 'FNR == 4 {print}')"
