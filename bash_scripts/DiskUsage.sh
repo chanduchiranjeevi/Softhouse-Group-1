@@ -1,10 +1,7 @@
 #!/bin/bash
 DISKAVAILABLE() {
 kbDiskAvailable="$(df ~/ | awk '{print $4}' | awk 'FNR == 2 {print}')"
-#percentageDiskUsed="$(df ~/ | awk '{print $5}')"
 echo $kbDiskAvailable
-#echo $percentageDiskUsed
-
 }
 
 DISKUSED()

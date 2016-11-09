@@ -2,7 +2,6 @@
 MEMORYFREE()
 {
 kbMemoryFree="$(sar -r 1 1 | awk '{print $2}' | awk 'FNR == 4 {print}')"
-#percentageMemoryUsed="$(sar -r 1 1 | awk '{print $4}')"
 echo $kbMemoryFree
 }
 
@@ -17,9 +16,7 @@ MEMORYUSED;
 
 HOST=$(hostname)
 kbMemoryFree=$(MEMORYFREE)
-#echo $kbMemoryFree
 kbMemoryUsed=$(MEMORYUSED)
-#echo $kbMemoryUsed
 time=$(date +%s%3N)
 echo $time
 JSON="{\"hostName\":\"$HOST\", \"time\":$time, \"kbMemoryFree\":$kbMemoryFree, \"kbMemoryUsed\":$kbMemoryUsed}"
