@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>System Monitor</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-flex.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="//mgcrea.github.io/angular-strap/styles/libs.min.css">
+    <link rel="stylesheet" href="//mgcrea.github.io/angular-strap/styles/docs.min.css">
+</head>
+<body>
+<navigation></navigation>
+<br>
+<div class="col-sm-12">
+<ng-view></ng-view>
+
+</div>
+</body>
+
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.min.js"></script>
+<script src="//cdn.jsdelivr.net/angularjs/1.5.5/angular-animate.min.js" data-semver="1.5.5"></script>
+<script src="//cdn.jsdelivr.net/angularjs/1.5.5/angular-sanitize.min.js" data-semver="1.5.5"></script>
+<script src="//mgcrea.github.io/angular-strap/dist/angular-strap.js" data-semver="v2.3.8"></script>
+<script src="//mgcrea.github.io/angular-strap/dist/angular-strap.tpl.js" data-semver="v2.3.8"></script>
+<script src="//mgcrea.github.io/angular-strap/docs/angular-strap.docs.tpl.js" data-semver="v2.3.8"></script>
+
+<script src="app/app.js"></script>
+<script src="app/config.js"></script>
+<script src="app/home/home.controller.js"></script>
+<script src="app/home/cpu/cpu.controller.js"></script>
+<script src="app/home/disk/disk.controller.js"></script>
+<script src="app/home/memory/memory.controller.js"></script>
+
+</html>
