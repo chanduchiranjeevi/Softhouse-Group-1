@@ -1,50 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7b5fc84-cf06-4505-b478-ffedab8235c8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../frontend/.idea/frontend.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../frontend/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../frontend/app/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../frontend/app/monitor/monitor.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../frontend/app/service/metrics.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../frontend/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../frontend/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../frontend/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../frontend/css/bootstrap-theme.min.css.map" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../frontend/app/home/home.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../frontend/app/service/project.service.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../frontend/css/bootstrap-flex.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../frontend/css/bootstrap-flex.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../frontend/css/bootstrap-flex.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../frontend/css/bootstrap-flex.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../frontend/css/bootstrap-grid.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../frontend/css/bootstrap-grid.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../frontend/css/bootstrap-grid.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../frontend/css/bootstrap-grid.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../frontend/css/bootstrap-reboot.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../frontend/css/bootstrap-reboot.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../frontend/css/bootstrap-reboot.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../frontend/css/bootstrap-reboot.min.css.map" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../frontend/app/home/cpu/cpu.controller.js" afterPath="$PROJECT_DIR$/../frontend/app/monitor/cpu/cpu.controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../frontend/app/home/cpu/cpu.tpl" afterPath="$PROJECT_DIR$/../frontend/app/monitor/cpu/cpu.tpl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../frontend/app/home/disk/disk.controller.js" afterPath="$PROJECT_DIR$/../frontend/app/monitor/disk/disk.controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../frontend/app/home/disk/disk.tpl" afterPath="$PROJECT_DIR$/../frontend/app/monitor/disk/disk.tpl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../frontend/app/home/home.controller.js" afterPath="$PROJECT_DIR$/../frontend/app/monitor/monitor.controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../frontend/app/home/memory/memory.controller.js" afterPath="$PROJECT_DIR$/../frontend/app/monitor/memory/memory.controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../frontend/app/home/memory/memory.tpl" afterPath="$PROJECT_DIR$/../frontend/app/monitor/memory/memory.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/app/app.js" afterPath="$PROJECT_DIR$/../frontend/app/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/app/contactus/contactus.tpl" afterPath="$PROJECT_DIR$/../frontend/app/contactus/contactus.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/app/introduction/introduction.tpl" afterPath="$PROJECT_DIR$/../frontend/app/introduction/introduction.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/app/login/login.tpl" afterPath="$PROJECT_DIR$/../frontend/app/login/login.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/app/navigation/navigation.tpl" afterPath="$PROJECT_DIR$/../frontend/app/navigation/navigation.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/css/bootstrap.css" afterPath="$PROJECT_DIR$/../frontend/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/../frontend/css/bootstrap.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/../frontend/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/css/bootstrap.min.css.map" afterPath="$PROJECT_DIR$/../frontend/css/bootstrap.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/index.html" afterPath="$PROJECT_DIR$/../frontend/index.html" />
-    </list>
+    <list default="true" id="c7b5fc84-cf06-4505-b478-ffedab8235c8" name="Default" comment="" />
     <ignored path="com.group1.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -143,7 +100,7 @@
       <file leaf-file-name="MemoryUsage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/group1/database/entity/MemoryUsage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
+            <state relative-caret-position="748">
               <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -1098,15 +1055,15 @@
       <workItem from="1478769638887" duration="1907000" />
       <workItem from="1478774427477" duration="4548000" />
       <workItem from="1478782784813" duration="4865000" />
-      <workItem from="1478854096362" duration="4851000" />
+      <workItem from="1478854096362" duration="6122000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48807000" />
+    <option name="totallyTimeSpent" value="50078000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1886,7 +1843,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/group1/database/entity/MemoryUsage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
+        <state relative-caret-position="748">
           <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />

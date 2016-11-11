@@ -1,9 +1,9 @@
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<h1  align="center" style="margin: -10px 0 10px 0">
+    Server Statistics Monitoring System
+</h1>
 
-    <div class="navbar-header">
-        <a class="navbar-brand" ng-href="#/">Server Statistics Monitor</a>
-    </div>
-    <div class="col-xs-9">
+<nav class="navbar navbar-inverse navbar" role="navigation">
+    <div class="col-xs-11.5">
         <ul class="nav navbar-nav">
             <li><a ng-href="#/">Home</a></li>
             <li><a ng-href="#/monitor">Server Statistics Monitor</a></li>
@@ -11,7 +11,7 @@
         </ul>
     </div>
 
-    <div class="col-xs-1">
+    <div class="col-xs-0.5">
         <ul class="nav navbar-nav">
             <li><a ng-href="#/login">Log in</a></li>
         </ul>

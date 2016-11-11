@@ -1,6 +1,4 @@
 <div class="container">
-<navigation class="row"></navigation>
-
     <div class="col-xs-8">
         <label for="title">Username</label>
         <input id="Username" name="title" class="form-control" ng-model="" type="text" placeholder="The username of your account ..." autocomplete="off" required>
