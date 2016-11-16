@@ -3,18 +3,15 @@
  */
 angular.module('app')
 
-    .controller('DiskController', function($scope, $http) {
+    .controller('DiskController', function($scope, $http, diskUsageService) {
 
-        $scope.selectedDiskIcon = '';
-        $scope.selectedDiskIcons = ['server1'];
-        $scope.Diskicons = [
-            {value: 'server1', label: 'server1'},
-            {value: 'server2', label: ' server2'},
-            {value: 'server3', label: ' server3'},
-            {value: 'server4', label: ' server4'}
+        diskUsageService.list()
+            .then(function (response) {
+                var metrics = response.data;
 
-        ];
-
-
-
+                $scope.hostnames = Array.from(new Set(metrics.map(function(metric) {
+                    return metric.hostName;
+                })));
+            });
+        $scope.selectedHostnames = [];
     });

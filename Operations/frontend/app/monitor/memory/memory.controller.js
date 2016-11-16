@@ -3,20 +3,15 @@
  */
 angular.module('app')
 
-    .controller('MemoryController', function($scope, $http) {
+    .controller('MemoryController', function($scope, $http,memoryUsageService) {
 
-        $scope.selectedMemoryIcon = '';
-        $scope.selectedMemoryIcons = ['server1'];
-        $scope.Memoryicons = [
-            {value: 'server1', label: 'server1'},
-            {value: 'server2', label: ' server2'},
-            {value: 'server3', label: ' server3'},
-            {value: 'server4', label: ' server4'},
-            {value: 'server5', label: ' server5'},
-            {value: 'server6', label: ' server6'}
+        memoryUsageService.list()
+            .then(function (response) {
+                var metrics = response.data;
 
-        ];
-
-
-
+                $scope.hostnames = Array.from(new Set(metrics.map(function(metric) {
+                    return metric.hostName;
+                })));
+            });
+        $scope.selectedHostnames = [];
     });

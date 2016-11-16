@@ -1,3 +1,0 @@
-function metricsService($http) {
-
-}
