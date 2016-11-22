@@ -40,9 +40,10 @@ angular.module('app')
             });
 
         $scope.selectedHostnames = ["srikanth-VirtualBox"];
+
         var chart = AmCharts.makeChart("chartdiv1", {
             "type": "serial",
-            "theme": "none",
+            "theme": "light",
             "dataProvider": [],
             "valueAxes": [{
                 "stackType": "100%",
@@ -55,13 +56,13 @@ angular.module('app')
                 "lineAlpha": 0.5,
                 "title": "Disk Used",
                 "valueField": "DiskUsed",
-                "balloonText": "<div style='margin:5px; font-size:12px;'>Disk Used(%):<b>[[value]], ([[percents]]%)</b></div>"
+                "balloonText": "<div style='margin:5px; font-size:12px;'>Disk Used:<b>[[percents]]%, ([[value]])</b></div>"
             }, {
                 "fillAlphas": 0.5,
                 "lineAlpha": 0.5,
                 "title": "Disk Free",
                 "valueField": "DiskFree",
-                "balloonText": "<div style='margin:5px; font-size:12px;'>Disk Free(%):<b>[[value]], ([[percents]]%)</b></div>"
+                "balloonText": "<div style='margin:5px; font-size:12px;'>Disk Free:<b>[[percents]]%, ([[value]])</b></div>"
             }],
             "chartScrollbar": {
                 "graph": "g1",
@@ -88,7 +89,6 @@ angular.module('app')
                 "minPeriod": "mm",
                 "parseDates": true
             },
-
             "export": {
                 "enabled": true,
                 "dateFormat": "YYYY-MM-DD HH:NN:SS"

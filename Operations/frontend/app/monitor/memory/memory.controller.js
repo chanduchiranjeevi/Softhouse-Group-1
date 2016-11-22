@@ -41,19 +41,26 @@ angular.module('app')
 
         var chart = AmCharts.makeChart("chartdiv2", {
             "type": "serial",
-            "theme": "none",
-            "marginRight": 80,
+            "theme": "light",
             "dataProvider": [],
             "valueAxes": [{
+                "stackType": "100%",
+                "gridAlpha": 0.07,
                 "position": "left",
                 "title": "Memory Usage(%)"
             }],
             "graphs": [{
-                "id": "g1",
-                "fillAlphas": 0.4,
-                "valueField": "MemoryUsage",
-                "type": "smoothedLine",
-                "balloonText": "<div style='margin:5px; font-size:19px;'>Memory Usage(%):<b>[[value]]</b></div>"
+                "fillAlphas": 0.5,
+                "lineAlpha": 0.5,
+                "title": "Memory Used",
+                "valueField": "MemoryUsed",
+                "balloonText": "<div style='margin:5px; font-size:12px;'>Disk Used(%):<b>[[percents]]%, ([[value]])</b></div>"
+            }, {
+                "fillAlphas": 0.5,
+                "lineAlpha": 0.5,
+                "title": "Memory Free",
+                "valueField": "MemoryFree",
+                "balloonText": "<div style='margin:5px; font-size:12px;'>Disk Free(%):<b>[[percents]]%, ([[value]])</b></div>"
             }],
             "chartScrollbar": {
                 "graph": "g1",
@@ -68,6 +75,9 @@ angular.module('app')
                 "autoGridCount": true,
                 "color": "#AAAAAA"
             },
+            "plotAreaBorderAlpha": 0,
+            "marginLeft": 0,
+            "marginBottom": 0,
             "chartCursor": {
                 "categoryBalloonDateFormat": "JJ:NN, DD MMMM",
                 "cursorPosition": "mouse"
@@ -77,6 +87,7 @@ angular.module('app')
                 "minPeriod": "mm",
                 "parseDates": true
             },
+
             "export": {
                 "enabled": true,
                 "dateFormat": "YYYY-MM-DD HH:NN:SS"
@@ -87,12 +98,10 @@ angular.module('app')
 
             for (var i = 0; i < Time.length; i++) {
 
-                totalMemory[i] = memoryUsed[i]+memoryFree[i];
-                memoryUsedPercentage[i] = (memoryUsed[i]/(totalMemory[i]))*100;
-
                 chartData.push({
                     date: Time[i],
-                    MemoryUsage: memoryUsedPercentage[i]
+                    MemoryUsed: memoryUsed[i],
+                    MemoryFree: memoryFree[i]
                 });
             }
             return chartData;

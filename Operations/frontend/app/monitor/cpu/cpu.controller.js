@@ -33,10 +33,11 @@ angular.module('app')
 
         var chart = AmCharts.makeChart("chartdiv", {
             "type": "serial",
-            "theme": "none",
+            "theme": "light",
             "marginRight": 80,
             "dataProvider": [],
             "valueAxes": [{
+
                 "position": "left",
                 "title": "Cpu Usage(%)"
             }],
@@ -44,7 +45,6 @@ angular.module('app')
                 "id": "g1",
                 "fillAlphas": 0.4,
                 "valueField": "CpuUsage",
-                "type": "smoothedLine",
                 "balloonText": "<div style='margin:5px; font-size:19px;'>Cpu Usage(%):<b>[[value]]</b></div>"
             }],
             "chartScrollbar": {

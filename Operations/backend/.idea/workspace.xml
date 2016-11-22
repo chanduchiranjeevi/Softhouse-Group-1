@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7b5fc84-cf06-4505-b478-ffedab8235c8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/app/monitor/cpu/cpu.controller.js" afterPath="$PROJECT_DIR$/../frontend/app/monitor/cpu/cpu.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/app/monitor/cpu/cpu.tpl" afterPath="$PROJECT_DIR$/../frontend/app/monitor/cpu/cpu.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/app/monitor/disk/disk.controller.js" afterPath="$PROJECT_DIR$/../frontend/app/monitor/disk/disk.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/app/monitor/disk/disk.tpl" afterPath="$PROJECT_DIR$/../frontend/app/monitor/disk/disk.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/app/monitor/memory/memory.controller.js" afterPath="$PROJECT_DIR$/../frontend/app/monitor/memory/memory.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/app/monitor/memory/memory.tpl" afterPath="$PROJECT_DIR$/../frontend/app/monitor/memory/memory.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/index.html" afterPath="$PROJECT_DIR$/../frontend/index.html" />
-    </list>
+    <list default="true" id="c7b5fc84-cf06-4505-b478-ffedab8235c8" name="Default" comment="" />
     <ignored path="com.group1.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -53,7 +43,7 @@
       <file leaf-file-name="CpuUsage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/group1/database/entity/CpuUsage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
+            <state relative-caret-position="325">
               <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
               <folding />
             </state>
@@ -1022,12 +1012,12 @@
       <workItem from="1479400421258" duration="815000" />
       <workItem from="1479406777880" duration="8304000" />
       <workItem from="1479471493549" duration="1996000" />
-      <workItem from="1479803733601" duration="1442000" />
+      <workItem from="1479803733601" duration="4023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92704000" />
+    <option name="totallyTimeSpent" value="95285000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
@@ -1471,7 +1461,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/group1/database/entity/CpuUsage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
+        <state relative-caret-position="325">
           <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
           <folding />
         </state>
