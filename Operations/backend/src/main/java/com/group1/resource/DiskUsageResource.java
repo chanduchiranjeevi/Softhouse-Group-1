@@ -33,9 +33,9 @@ public class DiskUsageResource {
     }
 
     @GET
-    @Path("/{id}")
-    public DiskUsage getDiskUsage(@PathParam("id") Integer id) {
-        return this.diskUsageProcess.find(id);
+    @Path("/{hostName}")
+    public List<DiskUsage> getDiskUsage(@PathParam("hostName") String hostName) {
+        return this.diskUsageProcess.find(hostName);
     }
 
     @POST
@@ -43,16 +43,10 @@ public class DiskUsageResource {
         return this.diskUsageProcess.create(diskUsage);
     }
 
-    @PUT
-    @Path("/{id}")
-    public DiskUsage updateDiskUsage(@PathParam("id") Integer id, @Valid DiskUsage diskUsage) {
-        return this.diskUsageProcess.update(id, diskUsage);
-    }
-
     @DELETE
     @Path("/{id}")
-    public void deleteDiskUsage(@PathParam("id") Integer id) {
-        this.diskUsageProcess.delete(id);
+    public void deleteDiskUsage(@PathParam("hostName") String hostName) {
+        this.diskUsageProcess.delete(hostName);
     }
 
 }

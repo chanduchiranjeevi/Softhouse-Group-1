@@ -23,13 +23,13 @@ public interface CpuUsageDAO {
     @SqlQuery("SELECT * FROM `cpuUsage`")
     List<CpuUsage> list();
 
+    @SqlQuery("SELECT * FROM `cpuUsage` WHERE hostName = :hostName")
+    List<CpuUsage> findByHostname(@Bind("hostName") String hostName);
+
     @SqlQuery("SELECT * FROM `cpuUsage` WHERE id = :id")
     CpuUsage findBy(@Bind("id") int id);
 
-    @SqlUpdate("DELETE FROM `cpuUsage` WHERE id = :id")
-    int deleteBy(@Bind("id") int id);
-
-    @SqlUpdate("UPDATE `cpuUsage` SET hostName = :hostName, time = :time, percentageCpu = :percentageCpu")
-    Integer update(@BindBean CpuUsage cpuUsage);
+    @SqlUpdate("DELETE FROM `cpuUsage` WHERE hostName = :hostName")
+    void deleteBy(@Bind("hostName") String hostName);
 
 }

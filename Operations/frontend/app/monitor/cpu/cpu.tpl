@@ -1,4 +1,7 @@
 <div class="bs-docs-section" ng-controller="CpuController">
+
+    {{selectedHostnames | json}}
+{{CpuMetrics | json}}
     <hr>
     <div>
         <label>CPU Usage:&nbsp;</label>
@@ -8,9 +11,9 @@
             Action <span class="caret"></span>
         </button>
 
-        <button type="button" ng-click="showme=true" class="btn btn-success">Show the Graph</button>
+        <button type="button" ng-click="showTheGraph()"  class="btn btn-success">Show the Graph</button>
 
-        <button type="button" ng-click="showme=false" class="btn btn-danger">Hide</button>
+        <button type="button" ng-click="hideTheGraph()" class="btn btn-danger">Hide</button>
     </div>
 
     <div ng-show="showme">

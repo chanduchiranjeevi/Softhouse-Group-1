@@ -23,13 +23,13 @@ public interface MemoryUsageDAO {
     @SqlQuery("SELECT * FROM `memoryUsage`")
     List<MemoryUsage> list();
 
+    @SqlQuery("SELECT * FROM `diskUsage` WHERE hostName = :hostName")
+    List<MemoryUsage> findByHostname(@Bind("hostName") String hostName);
+
     @SqlQuery("SELECT * FROM `memoryUsage` WHERE id = :id")
     MemoryUsage findBy(@Bind("id") int id);
 
-    @SqlUpdate("DELETE FROM `memoryUsage` WHERE id = :id")
-    int deleteBy(@Bind("id") int id);
-
-    @SqlUpdate("UPDATE `memoryUsage` SET hostName = :hostName, time = :time, kbMemoryFree = :kbMemoryFree, kbMemoryUsed = :kbMemoryUsed")
-    Integer update(@BindBean MemoryUsage memoryUsage);
+    @SqlUpdate("DELETE FROM `memoryUsage` WHERE hostName = :hostName")
+    void deleteBy(@Bind("hostName") String hostName);
 
 }

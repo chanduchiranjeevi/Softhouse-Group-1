@@ -1,5 +1,6 @@
 package com.group1.database;
 
+import com.group1.database.entity.CpuUsage;
 import com.group1.database.entity.DiskUsage;
 import org.skife.jdbi.v2.sqlobject.*;
 import org.skife.jdbi.v2.sqlobject.customizers.RegisterMapperFactory;
@@ -23,13 +24,13 @@ public interface DiskUsageDAO {
     @SqlQuery("SELECT * FROM `diskUsage`")
     List<DiskUsage> list();
 
+    @SqlQuery("SELECT * FROM `diskUsage` WHERE hostName = :hostName")
+    List<DiskUsage> findByHostname(@Bind("hostName") String hostName);
+
     @SqlQuery("SELECT * FROM `diskUsage` WHERE id = :id")
     DiskUsage findBy(@Bind("id") int id);
 
-    @SqlUpdate("DELETE FROM `diskUsage` WHERE id = :id")
-    int deleteBy(@Bind("id") int id);
-
-    @SqlUpdate("UPDATE `diskUsage` SET hostName = :hostName, time = :time, kbDiskAvailable = :kbDiskAvailable, kbDiskUsed = :kbDiskUsed")
-    Integer update(@BindBean DiskUsage diskUsage);
+    @SqlUpdate("DELETE FROM `diskUsage` WHERE hostName = :hostName")
+    void deleteBy(@Bind("hostName") String hostName);
 
 }

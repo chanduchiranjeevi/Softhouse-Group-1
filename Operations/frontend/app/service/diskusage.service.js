@@ -2,7 +2,7 @@
  * Created by sriku on 2016-11-15.
  */
 function diskUsageService($http, $interpolate) {
-    var disk = $interpolate('/api/Metrics/DiskUsage/{{id}}');
+    var disk = $interpolate('/api/Metrics/DiskUsage/{{}}');
 
     return {
         list: listDisk,
@@ -13,8 +13,8 @@ function diskUsageService($http, $interpolate) {
         return $http.get(disk());
     }
 
-    function destroyDisk(id){
-        return $http.delete(disk( { id: id}))
+    function destroyDisk(hostName){
+        return $http.delete(disk( { hostName: hostName}))
     }
 
 }

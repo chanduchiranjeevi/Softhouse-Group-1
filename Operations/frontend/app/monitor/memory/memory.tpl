@@ -1,4 +1,7 @@
 <div class="bs-docs-section" ng-controller="MemoryController">
+
+    {{selectedHostnames | json}}
+
     <hr>
     <div>
         <label>Memory Usage:&nbsp;</label>

@@ -30,29 +30,15 @@ public class MemoryUsageDBImpl implements MemoryUsageProcess {
     }
 
     @Override
-    public MemoryUsage update(Integer id, MemoryUsage updatedMemoryUsage) throws NotFoundException {
-        MemoryUsage memoryUsage = this.find(id);
-
-        memoryUsage.setTime(updatedMemoryUsage.getTime());
-        memoryUsage.setHostName(updatedMemoryUsage.getHostName());
-        memoryUsage.setKbMemoryFree(updatedMemoryUsage.getKbMemoryFree());
-        memoryUsage.setKbMemoryUsed(updatedMemoryUsage.getKbMemoryUsed());
-
-        this.memoryUsageDAO.update(memoryUsage);
-
-        return memoryUsage;
-    }
-
-    @Override
-    public MemoryUsage find(Integer id) throws NotFoundException {
+    public List<MemoryUsage> find(String hostName) throws NotFoundException {
         return Optional
-                .ofNullable(this.memoryUsageDAO.findBy(id))
+                .ofNullable(this.memoryUsageDAO.findByHostname(hostName))
                 .orElseThrow(() -> new NotFoundException("Memory usage stats do not exist"));
     }
 
     @Override
-    public void delete(Integer id) {
-        this.memoryUsageDAO.deleteBy(id);
+    public void delete(String hostName) {
+        this.memoryUsageDAO.deleteBy(hostName);
     }
     
 }

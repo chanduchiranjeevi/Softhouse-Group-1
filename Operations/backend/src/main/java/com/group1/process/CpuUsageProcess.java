@@ -12,7 +12,6 @@ import java.util.List;
 public interface CpuUsageProcess {
     List<CpuUsage> list();
     CpuUsage create(CpuUsage cpuUsage);
-    CpuUsage update(Integer id, CpuUsage cpuUsage) throws NotFoundException;
-    CpuUsage find(Integer id) throws NotFoundException;
-    void delete(Integer id);
+    List<CpuUsage> find(String hostName) throws NotFoundException;
+    void delete(String hostName);
 }

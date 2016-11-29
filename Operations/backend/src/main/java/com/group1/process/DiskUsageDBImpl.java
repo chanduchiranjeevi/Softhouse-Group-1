@@ -29,29 +29,15 @@ public class DiskUsageDBImpl implements DiskUsageProcess {
     }
 
     @Override
-    public DiskUsage update(Integer id, DiskUsage updatedDiskUsage) throws NotFoundException {
-        DiskUsage diskUsage = this.find(id);
-
-        diskUsage.setTime(updatedDiskUsage.getTime());
-        diskUsage.setHostName(updatedDiskUsage.getHostName());
-        diskUsage.setKbDiskAvailable(updatedDiskUsage.getKbDiskAvailable());
-        diskUsage.setKbDiskUsed(updatedDiskUsage.getKbDiskUsed());
-
-        this.diskUsageDAO.update(diskUsage);
-
-        return diskUsage;
-    }
-
-    @Override
-    public DiskUsage find(Integer id) throws NotFoundException {
+    public List<DiskUsage> find(String hostName) throws NotFoundException {
         return Optional
-                .ofNullable(this.diskUsageDAO.findBy(id))
+                .ofNullable(this.diskUsageDAO.findByHostname(hostName))
                 .orElseThrow(() -> new NotFoundException("Disk usage stats do not exist"));
     }
 
     @Override
-    public void delete(Integer id) {
-        this.diskUsageDAO.deleteBy(id);
+    public void delete(String hostName) {
+        this.diskUsageDAO.deleteBy(hostName);
     }
 
 }

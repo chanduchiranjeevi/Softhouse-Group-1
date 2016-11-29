@@ -7,6 +7,7 @@ function appConfig($routeProvider) {
         .when('/', { template: '<introduction></introduction>' })
         .when('/monitor', { template: '<monitor></monitor>' })
         .when('/contactus', { template: '<contactus></contactus>' })
+        .when('/manage', { template: '<manage></manage>' })
         .when('/login', { template: '<login></login>' })
         .otherwise({
             redirectTo: '/'

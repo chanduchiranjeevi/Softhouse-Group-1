@@ -11,6 +11,14 @@ angular.module('app', ['ngRoute', 'ngAnimate', 'ngSanitize', 'mgcrea.ngStrap'])
     .component('contactus', { templateUrl: 'app/contactus/contactus.tpl' })
     .component('monitor', { templateUrl: 'app/monitor/monitor.tpl' })
     .component('login', { templateUrl: 'app/login/login.tpl' })
+    .component('manage', {
+        templateUrl: 'app/manage/manage.tpl',
+        controller: 'ManageController',
+
+        bindings: {
+            onSubmit: '<'
+        }
+    })
     .component('cpu', {
         templateUrl: 'app/monitor/cpu/cpu.tpl',
         controller: 'CpuController',

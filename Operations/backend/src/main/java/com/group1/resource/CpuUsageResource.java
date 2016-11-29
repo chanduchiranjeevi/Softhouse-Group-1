@@ -33,9 +33,9 @@ public class CpuUsageResource {
     }
 
     @GET
-    @Path("/{id}")
-    public CpuUsage getCpuUsage(@PathParam("id") Integer id) {
-        return this.cpuUsageProcess.find(id);
+    @Path("/{hostName}")
+    public List<CpuUsage> getCpuUsage(@PathParam("hostName") String hostName) {
+        return this.cpuUsageProcess.find(hostName);
     }
 
     @POST
@@ -43,16 +43,10 @@ public class CpuUsageResource {
         return this.cpuUsageProcess.create(cpuUsage);
     }
 
-    @PUT
-    @Path("/{id}")
-    public CpuUsage updateCpuUsage(@PathParam("id") Integer id, @Valid CpuUsage cpuUsage) {
-        return this.cpuUsageProcess.update(id, cpuUsage);
-    }
-
     @DELETE
-    @Path("/{id}")
-    public void deleteCpuUsage(@PathParam("id") Integer id) {
-        this.cpuUsageProcess.delete(id);
+    @Path("/{hostName}")
+    public void deleteCpuUsage(@PathParam("hostName") String hostName) {
+        this.cpuUsageProcess.delete(hostName);
     }
 
 }

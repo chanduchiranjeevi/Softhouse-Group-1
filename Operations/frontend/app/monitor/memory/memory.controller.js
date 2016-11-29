@@ -12,6 +12,9 @@ angular.module('app')
         var totalMemory = [];
         var chartData = [];
         var memoryUsedPercentage = [];
+        var memoryFreePercentage = [];
+
+        $scope.selectedHostnames = [];
 
         memoryUsageService.list()
             .then(function (response) {
@@ -37,7 +40,6 @@ angular.module('app')
                 return response;
             });
 
-        $scope.selectedHostnames = ["srikanth-VirtualBox"];
 
         var chart = AmCharts.makeChart("chartdiv2", {
             "type": "serial",
@@ -54,13 +56,13 @@ angular.module('app')
                 "lineAlpha": 0.5,
                 "title": "Memory Used",
                 "valueField": "MemoryUsed",
-                "balloonText": "<div style='margin:5px; font-size:12px;'>Disk Used(%):<b>[[percents]]%, ([[value]])</b></div>"
+                "balloonText": "<div style='margin:5px; font-size:12px;'>Disk Used(%):<b>[[value]]</b></div>"
             }, {
                 "fillAlphas": 0.5,
                 "lineAlpha": 0.5,
                 "title": "Memory Free",
                 "valueField": "MemoryFree",
-                "balloonText": "<div style='margin:5px; font-size:12px;'>Disk Free(%):<b>[[percents]]%, ([[value]])</b></div>"
+                "balloonText": "<div style='margin:5px; font-size:12px;'>Disk Free(%):<b>[[value]]</b></div>"
             }],
             "chartScrollbar": {
                 "graph": "g1",
@@ -98,10 +100,15 @@ angular.module('app')
 
             for (var i = 0; i < Time.length; i++) {
 
+                totalMemory[i] = memoryUsed[i] + memoryFree[i];
+
+                memoryUsedPercentage[i] = (memoryUsed[i]/totalMemory[i])* 100;
+                memoryFreePercentage[i] = 100 - memoryUsedPercentage;
+
                 chartData.push({
                     date: Time[i],
-                    MemoryUsed: memoryUsed[i],
-                    MemoryFree: memoryFree[i]
+                    MemoryUsed: memoryUsedPercentage[i],
+                    MemoryFree: memoryFreePercentage[i]
                 });
             }
             return chartData;

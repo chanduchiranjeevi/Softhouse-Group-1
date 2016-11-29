@@ -30,27 +30,14 @@ public class CpuUsageDBImpl implements CpuUsageProcess {
     }
 
     @Override
-    public CpuUsage update(Integer id, CpuUsage updatedCpuUsage) throws NotFoundException {
-        CpuUsage cpuUsage = this.find(id);
-
-        cpuUsage.setTime(updatedCpuUsage.getTime());
-        cpuUsage.setHostName(updatedCpuUsage.getHostName());
-        cpuUsage.setPercentageCpu(updatedCpuUsage.getPercentageCpu());
-
-        this.cpuUsageDAO.update(cpuUsage);
-
-        return cpuUsage;
-    }
-
-    @Override
-    public CpuUsage find(Integer id) throws NotFoundException {
+    public List<CpuUsage> find(String hostName) throws NotFoundException {
         return Optional
-                .ofNullable(this.cpuUsageDAO.findBy(id))
+                .ofNullable(this.cpuUsageDAO.findByHostname(hostName))
                 .orElseThrow(() -> new NotFoundException("CPU usage stats do not exist"));
     }
 
     @Override
-    public void delete(Integer id) {
-        this.cpuUsageDAO.deleteBy(id);
+    public void delete(String hostName) {
+        this.cpuUsageDAO.deleteBy(hostName);
     }
 }

@@ -14,6 +14,8 @@ angular.module('app')
         var diskUsedPercentage = [];
         var diskFreePercentage=[];
 
+        $scope.selectedHostnames = [];
+
         diskUsageService.list()
             .then(function (response) {
                 metrics = response.data;
@@ -39,15 +41,14 @@ angular.module('app')
                 return response;
             });
 
-        $scope.selectedHostnames = ["srikanth-VirtualBox"];
 
         var chart = AmCharts.makeChart("chartdiv1", {
             "type": "serial",
             "theme": "light",
             "dataProvider": [],
             "valueAxes": [{
-                "stackType": "100%",
-                "gridAlpha": 0.07,
+                "minimum": 0,
+                "maximum": 100,
                 "position": "left",
                 "title": "Disk Usage(%)"
             }],
@@ -56,13 +57,7 @@ angular.module('app')
                 "lineAlpha": 0.5,
                 "title": "Disk Used",
                 "valueField": "DiskUsed",
-                "balloonText": "<div style='margin:5px; font-size:12px;'>Disk Used:<b>[[percents]]%, ([[value]])</b></div>"
-            }, {
-                "fillAlphas": 0.5,
-                "lineAlpha": 0.5,
-                "title": "Disk Free",
-                "valueField": "DiskFree",
-                "balloonText": "<div style='margin:5px; font-size:12px;'>Disk Free:<b>[[percents]]%, ([[value]])</b></div>"
+                "balloonText": "<div style='margin:5px; font-size:12px;'>Disk Used:<b>[[value]]</b></div>"
             }],
             "chartScrollbar": {
                 "graph": "g1",
@@ -99,10 +94,14 @@ angular.module('app')
 
             for (var i = 0; i < Time.length; i++) {
 
+                totalDiskSpace[i] = diskUsed[i] + diskFree[i];
+
+                diskUsedPercentage[i] = (diskUsed[i]/totalDiskSpace[i])* 100;
+                diskFreePercentage[i] = 100 - diskUsedPercentage;
                 chartData.push({
                     date: Time[i],
-                    DiskUsed: diskUsed[i],
-                    DiskFree: diskFree[i]
+                    DiskUsed: diskUsedPercentage[i],
+                    DiskFree: diskFreePercentage[i]
                 });
             }
             return chartData;

@@ -1,4 +1,7 @@
 <div class="bs-docs-section" ng-controller="DiskController">
+
+    {{selectedHostnames | json}}
+
     <hr>
     <div>
         <label>Disk Usage:&nbsp;</label>

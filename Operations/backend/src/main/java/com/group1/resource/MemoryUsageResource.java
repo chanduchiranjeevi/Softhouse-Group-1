@@ -33,9 +33,9 @@ public class MemoryUsageResource {
     }
 
     @GET
-    @Path("/{id}")
-    public MemoryUsage getMemoryUsage(@PathParam("id") Integer id) {
-        return this.memoryUsageProcess.find(id);
+    @Path("/{hostName}")
+    public List<MemoryUsage> getMemoryUsage(@PathParam("hostName") String hostName) {
+        return this.memoryUsageProcess.find(hostName);
     }
 
     @POST
@@ -43,16 +43,10 @@ public class MemoryUsageResource {
         return this.memoryUsageProcess.create(memoryUsage);
     }
 
-    @PUT
-    @Path("/{id}")
-    public MemoryUsage updateMemoryUsage(@PathParam("id") Integer id, @Valid MemoryUsage memoryUsage) {
-        return this.memoryUsageProcess.update(id, memoryUsage);
-    }
-
     @DELETE
-    @Path("/{id}")
-    public void deleteMemoryUsage(@PathParam("id") Integer id) {
-        this.memoryUsageProcess.delete(id);
+    @Path("/{hostName}")
+    public void deleteMemoryUsage(@PathParam("hostName") String hostName) {
+        this.memoryUsageProcess.delete(hostName);
     }
 
 }

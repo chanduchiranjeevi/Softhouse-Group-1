@@ -2,7 +2,7 @@
  * Created by sriku on 2016-11-15.
  */
 function memoryUsageService($http, $interpolate) {
-    var memory = $interpolate('/api/Metrics/MemoryUsage/{{id}}');
+    var memory = $interpolate('/api/Metrics/MemoryUsage/{{}}');
 
     return {
         list: listMemory,
@@ -13,8 +13,8 @@ function memoryUsageService($http, $interpolate) {
         return $http.get(memory());
     }
 
-    function destroyMemory(id){
-        return $http.delete(memory({ id: id }))
+    function destroyMemory(hostName){
+        return $http.delete(memory({ hostName: hostName }))
     }
 
 }

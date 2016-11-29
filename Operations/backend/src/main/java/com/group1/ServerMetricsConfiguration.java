@@ -12,6 +12,7 @@ import javax.validation.constraints.NotNull;
 /**
  * Created by sriku on 2016-10-27.
  */
+
 public class ServerMetricsConfiguration extends Configuration implements AssetsBundleConfiguration {
 
     @Valid
