@@ -59,7 +59,7 @@ angular.module('app')
                 "fillAlphas": 0.6,
                 "lineAlpha": 0.4,
                 "valueField": "CpuUsage",
-                "balloonText": "<div style='margin:5px; font-size:19px;'>Cpu Usage(%):<b>[[value]]</b></div>"
+                "balloonText": "<div style='margin:5px; font-size:12px;'>Cpu Usage(%):<b>[[value]]</b></div>"
             }],
             "chartScrollbar": {
                 "graph": "g1",
