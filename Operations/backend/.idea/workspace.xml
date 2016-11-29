@@ -2,45 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7b5fc84-cf06-4505-b478-ffedab8235c8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/group1/ServerMetricsConfiguration.class" afterPath="$PROJECT_DIR$/build/classes/main/com/group1/ServerMetricsConfiguration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/group1/database/CpuUsageDAO.class" afterPath="$PROJECT_DIR$/build/classes/main/com/group1/database/CpuUsageDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/group1/database/DiskUsageDAO.class" afterPath="$PROJECT_DIR$/build/classes/main/com/group1/database/DiskUsageDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/group1/database/MemoryUsageDAO.class" afterPath="$PROJECT_DIR$/build/classes/main/com/group1/database/MemoryUsageDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/group1/process/CpuUsageDBImpl.class" afterPath="$PROJECT_DIR$/build/classes/main/com/group1/process/CpuUsageDBImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/group1/process/CpuUsageProcess.class" afterPath="$PROJECT_DIR$/build/classes/main/com/group1/process/CpuUsageProcess.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/group1/process/DiskUsageDBImpl.class" afterPath="$PROJECT_DIR$/build/classes/main/com/group1/process/DiskUsageDBImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/group1/process/DiskUsageProcess.class" afterPath="$PROJECT_DIR$/build/classes/main/com/group1/process/DiskUsageProcess.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/group1/process/MemoryUsageDBImpl.class" afterPath="$PROJECT_DIR$/build/classes/main/com/group1/process/MemoryUsageDBImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/group1/process/MemoryUsageProcess.class" afterPath="$PROJECT_DIR$/build/classes/main/com/group1/process/MemoryUsageProcess.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/group1/resource/CpuUsageResource.class" afterPath="$PROJECT_DIR$/build/classes/main/com/group1/resource/CpuUsageResource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/group1/resource/DiskUsageResource.class" afterPath="$PROJECT_DIR$/build/classes/main/com/group1/resource/DiskUsageResource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/group1/resource/MemoryUsageResource.class" afterPath="$PROJECT_DIR$/build/classes/main/com/group1/resource/MemoryUsageResource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/group1/ServerMetricsConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/group1/ServerMetricsConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/group1/database/CpuUsageDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/group1/database/CpuUsageDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/group1/database/DiskUsageDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/group1/database/DiskUsageDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/group1/database/MemoryUsageDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/group1/database/MemoryUsageDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/group1/process/CpuUsageDBImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/group1/process/CpuUsageDBImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/group1/process/CpuUsageProcess.java" afterPath="$PROJECT_DIR$/src/main/java/com/group1/process/CpuUsageProcess.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/group1/process/DiskUsageDBImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/group1/process/DiskUsageDBImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/group1/process/DiskUsageProcess.java" afterPath="$PROJECT_DIR$/src/main/java/com/group1/process/DiskUsageProcess.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/group1/process/MemoryUsageDBImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/group1/process/MemoryUsageDBImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/group1/process/MemoryUsageProcess.java" afterPath="$PROJECT_DIR$/src/main/java/com/group1/process/MemoryUsageProcess.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/group1/resource/CpuUsageResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/group1/resource/CpuUsageResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/group1/resource/DiskUsageResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/group1/resource/DiskUsageResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/group1/resource/MemoryUsageResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/group1/resource/MemoryUsageResource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/app/monitor/cpu/cpu.controller.js" afterPath="$PROJECT_DIR$/../frontend/app/monitor/cpu/cpu.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/app/monitor/cpu/cpu.tpl" afterPath="$PROJECT_DIR$/../frontend/app/monitor/cpu/cpu.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/app/monitor/disk/disk.controller.js" afterPath="$PROJECT_DIR$/../frontend/app/monitor/disk/disk.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/app/monitor/disk/disk.tpl" afterPath="$PROJECT_DIR$/../frontend/app/monitor/disk/disk.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/app/monitor/memory/memory.controller.js" afterPath="$PROJECT_DIR$/../frontend/app/monitor/memory/memory.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/app/monitor/memory/memory.tpl" afterPath="$PROJECT_DIR$/../frontend/app/monitor/memory/memory.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/app/navigation/navigation.tpl" afterPath="$PROJECT_DIR$/../frontend/app/navigation/navigation.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/app/service/cpuusage.service.js" afterPath="$PROJECT_DIR$/../frontend/app/service/cpuusage.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/app/service/diskusage.service.js" afterPath="$PROJECT_DIR$/../frontend/app/service/diskusage.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../frontend/app/service/memoryusage.service.js" afterPath="$PROJECT_DIR$/../frontend/app/service/memoryusage.service.js" />
     </list>
     <ignored path="com.group1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -126,11 +90,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CpuUsageDAO.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/group1/database/CpuUsageDAO.java">
+      <file leaf-file-name="ServerMetricsApplication.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/group1/ServerMetricsApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+            <state relative-caret-position="612">
+              <caret line="49" column="94" lean-forward="true" selection-start-line="49" selection-start-column="94" selection-end-line="49" selection-end-column="94" />
               <folding />
             </state>
           </provider>
@@ -542,10 +506,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="1358" />
+    <option name="y" value="-317" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -565,8 +529,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -605,39 +567,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.group1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="group1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -904,7 +838,7 @@
     <option name="totallyTimeSpent" value="97415000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="1358" y="-317" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -916,13 +850,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47135842" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46912244" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4969743" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23600605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4976452" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1288,14 +1222,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/group1/ServerMetricsApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="41" column="20" lean-forward="true" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/group1/process/CpuUsageProcess.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1335,7 +1261,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="23" column="42" lean-forward="false" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1343,14 +1268,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="26" column="49" lean-forward="false" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/group1/database/CpuUsageDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+        <state relative-caret-position="510">
+          <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/group1/ServerMetricsApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="49" column="94" lean-forward="true" selection-start-line="49" selection-start-column="94" selection-end-line="49" selection-end-column="94" />
           <folding />
         </state>
       </provider>

@@ -43,7 +43,7 @@ angular.module('app')
 
         var chart = AmCharts.makeChart("chartdiv2", {
             "type": "serial",
-            "theme": "light",
+            "theme": "none",
             "dataProvider": [],
             "valueAxes": [{
                 "stackType": "100%",
@@ -56,13 +56,13 @@ angular.module('app')
                 "lineAlpha": 0.5,
                 "title": "Memory Used",
                 "valueField": "MemoryUsed",
-                "balloonText": "<div style='margin:5px; font-size:12px;'>Disk Used(%):<b>[[value]]</b></div>"
+                "balloonText": "<div style='margin:5px; font-size:12px;'>Memory Used(%):<b>[[value]]</b></div>"
             }, {
                 "fillAlphas": 0.5,
                 "lineAlpha": 0.5,
                 "title": "Memory Free",
                 "valueField": "MemoryFree",
-                "balloonText": "<div style='margin:5px; font-size:12px;'>Disk Free(%):<b>[[value]]</b></div>"
+                "balloonText": "<div style='margin:5px; font-size:12px;'>Memory Free(%):<b>[[value]]</b></div>"
             }],
             "chartScrollbar": {
                 "graph": "g1",
