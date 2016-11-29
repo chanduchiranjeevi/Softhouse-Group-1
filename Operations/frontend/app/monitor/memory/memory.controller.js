@@ -9,12 +9,10 @@ angular.module('app')
         var memoryFree;
         var memoryUsed;
         var Time;
-        var totalMemory = [];
-        var chartData = [];
+        var totalMemory;
         var memoryUsedPercentage = [];
-        var memoryFreePercentage = [];
-
-        $scope.selectedHostnames = [];
+        $scope.showme = false;
+        $scope.selectedHostname = "";
 
         memoryUsageService.list()
             .then(function (response) {
@@ -23,22 +21,39 @@ angular.module('app')
                 $scope.hostnames = Array.from(new Set(metrics.map(function(metric) {
                     return metric.hostName;
                 })));
-
-                memoryFree = metrics.map(function(metric){
-                    return metric.kbMemoryFree;
-                });
-
-                memoryUsed = metrics.map(function(metric){
-                    return metric.kbMemoryUsed;
-                });
-
-                Time = metrics.map(function(metric){
-                    return metric.time;
-                });
-                chart.dataProvider = generateChartData();
-                chart.validateData();
                 return response;
             });
+
+
+
+        $scope.showTheGraph = function () {
+            var chartData = [];
+            memoryUsageService.listByHostname($scope.selectedHostname)
+                .then(function (response) {
+                    $scope.MemoryMetrics = response.data;
+
+                    memoryFree = $scope.MemoryMetrics.map(function(memoryMetric){
+                        return memoryMetric.kbMemoryFree;
+                    });
+
+                    memoryUsed = $scope.MemoryMetrics.map(function(memoryMetric){
+                        return memoryMetric.kbMemoryUsed;
+                    });
+
+                    Time = $scope.MemoryMetrics.map(function(memoryMetric){
+                        return memoryMetric.time;
+                    });
+
+                    chart.dataProvider = generateChartData(chartData);
+                    chart.validateData();
+                });
+            $scope.showme = true;
+            return chartData;
+        };
+
+        $scope.hideTheGraph = function () {
+            $scope.showme = false;
+        };
 
 
         var chart = AmCharts.makeChart("chartdiv2", {
@@ -46,23 +61,18 @@ angular.module('app')
             "theme": "none",
             "dataProvider": [],
             "valueAxes": [{
-                "stackType": "100%",
-                "gridAlpha": 0.07,
+                "minimum": 0,
+                "maximum": 100,
                 "position": "left",
                 "title": "Memory Usage(%)"
             }],
             "graphs": [{
+                "id":"g1",
                 "fillAlphas": 0.5,
                 "lineAlpha": 0.5,
                 "title": "Memory Used",
-                "valueField": "MemoryUsed",
-                "balloonText": "<div style='margin:5px; font-size:12px;'>Memory Used(%):<b>[[value]]</b></div>"
-            }, {
-                "fillAlphas": 0.5,
-                "lineAlpha": 0.5,
-                "title": "Memory Free",
-                "valueField": "MemoryFree",
-                "balloonText": "<div style='margin:5px; font-size:12px;'>Memory Free(%):<b>[[value]]</b></div>"
+                "valueField": "MemoryUsedPercentage",
+                "balloonText": "<div style='margin:5px; font-size:12px;'>Memory Used(%):<b>[[MemoryUsed]]kb, ([[value]]%)</b></div>"
             }],
             "chartScrollbar": {
                 "graph": "g1",
@@ -89,26 +99,22 @@ angular.module('app')
                 "minPeriod": "mm",
                 "parseDates": true
             },
-
             "export": {
                 "enabled": true,
                 "dateFormat": "YYYY-MM-DD HH:NN:SS"
             }
         });
 
-        function generateChartData() {
+        function generateChartData(chartData) {
+
+            totalMemory = memoryUsed[0] + memoryFree[0];
 
             for (var i = 0; i < Time.length; i++) {
-
-                totalMemory[i] = memoryUsed[i] + memoryFree[i];
-
-                memoryUsedPercentage[i] = (memoryUsed[i]/totalMemory[i])* 100;
-                memoryFreePercentage[i] = 100 - memoryUsedPercentage;
-
+                memoryUsedPercentage[i] = (memoryUsed[i]/totalMemory)* 100;
                 chartData.push({
                     date: Time[i],
-                    MemoryUsed: memoryUsedPercentage[i],
-                    MemoryFree: memoryFreePercentage[i]
+                    MemoryUsed: memoryUsed[i],
+                    MemoryUsedPercentage: memoryUsedPercentage[i].toFixed(2)
                 });
             }
             return chartData;

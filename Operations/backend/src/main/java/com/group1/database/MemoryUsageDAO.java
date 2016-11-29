@@ -23,7 +23,7 @@ public interface MemoryUsageDAO {
     @SqlQuery("SELECT * FROM `memoryUsage`")
     List<MemoryUsage> list();
 
-    @SqlQuery("SELECT * FROM `diskUsage` WHERE hostName = :hostName")
+    @SqlQuery("SELECT * FROM `memoryUsage` WHERE hostName = :hostName")
     List<MemoryUsage> findByHostname(@Bind("hostName") String hostName);
 
     @SqlQuery("SELECT * FROM `memoryUsage` WHERE id = :id")

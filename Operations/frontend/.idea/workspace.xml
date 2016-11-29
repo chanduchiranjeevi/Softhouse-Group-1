@@ -22,30 +22,94 @@
     <favorites_list name="newProject" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cpu.controller.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/monitor/cpu/cpu.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="861">
-              <caret line="52" column="34" lean-forward="true" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
-              <folding>
-                <marker date="1480413873938" expanded="true" signature="1948:1975" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cpu.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/monitor/cpu/cpu.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="cpu.controller.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/monitor/cpu/cpu.controller.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="833">
+                  <caret line="49" column="30" lean-forward="true" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+                  <folding>
+                    <marker date="1480413873938" expanded="true" signature="1948:1975" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="disk.controller.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/monitor/disk/disk.controller.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="408">
+                  <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+                  <folding>
+                    <marker date="1480416083093" expanded="true" signature="2274:2301" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="memory.controller.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/monitor/memory/memory.controller.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="799">
+                  <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+                  <folding>
+                    <marker date="1480416813195" expanded="true" signature="2310:2337" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="memory.tpl" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/monitor/memory/memory.tpl">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="442">
+                  <caret line="26" column="6" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="cpu.tpl" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/monitor/cpu/cpu.tpl">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="425">
+                  <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="disk.tpl" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/monitor/disk/disk.tpl">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="60" lean-forward="false" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="disk.controller.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/monitor/disk/disk.controller.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                  <caret line="30" column="27" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+                  <folding>
+                    <marker date="1480416083093" expanded="true" signature="2274:2301" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -90,19 +154,19 @@
         <option value="$PROJECT_DIR$/js/light.js" />
         <option value="$PROJECT_DIR$/app/navigation/navigation.tpl" />
         <option value="$PROJECT_DIR$/app/manage/manage.tpl.html" />
-        <option value="$PROJECT_DIR$/app/monitor/disk/disk.controller.js" />
-        <option value="$PROJECT_DIR$/app/monitor/memory/memory.tpl" />
-        <option value="$PROJECT_DIR$/app/monitor/disk/disk.tpl" />
         <option value="$PROJECT_DIR$/app/config.js" />
         <option value="$PROJECT_DIR$/app/app.js" />
         <option value="$PROJECT_DIR$/app/manage/manage.controller.js" />
-        <option value="$PROJECT_DIR$/app/monitor/memory/memory.controller.js" />
         <option value="$PROJECT_DIR$/app/manage/manage.tpl" />
         <option value="$PROJECT_DIR$/app/service/cpuusage.service.js" />
         <option value="$PROJECT_DIR$/app/service/diskusage.service.js" />
         <option value="$PROJECT_DIR$/app/service/memoryusage.service.js" />
-        <option value="$PROJECT_DIR$/app/monitor/cpu/cpu.controller.js" />
         <option value="$PROJECT_DIR$/app/monitor/cpu/cpu.tpl" />
+        <option value="$PROJECT_DIR$/app/monitor/cpu/cpu.controller.js" />
+        <option value="$PROJECT_DIR$/app/monitor/disk/disk.tpl" />
+        <option value="$PROJECT_DIR$/app/monitor/disk/disk.controller.js" />
+        <option value="$PROJECT_DIR$/app/monitor/memory/memory.controller.js" />
+        <option value="$PROJECT_DIR$/app/monitor/memory/memory.tpl" />
       </list>
     </option>
   </component>
@@ -431,12 +495,12 @@
       <workItem from="1480324751274" duration="5326000" />
       <workItem from="1480330435192" duration="6732000" />
       <workItem from="1480401800123" duration="1671000" />
-      <workItem from="1480410492670" duration="3404000" />
+      <workItem from="1480410492670" duration="6955000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143790000" />
+    <option name="totallyTimeSpent" value="147341000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-317" width="1936" height="1056" extended-state="6" />
@@ -446,18 +510,18 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982087" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,7 +560,7 @@
         <state relative-caret-position="459">
           <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
           <folding>
-            <marker date="1480069007152" expanded="true" signature="1729:1756" ph="..." />
+            <marker date="1480416083093" expanded="true" signature="2274:2301" ph="..." />
           </folding>
         </state>
       </provider>
@@ -506,8 +570,7 @@
         <state relative-caret-position="697">
           <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
-            <marker date="1480411258630" expanded="true" signature="1759:1786" ph="..." />
-            <marker date="1480411258630" expanded="true" signature="2041:2068" ph="..." />
+            <marker date="1480416813195" expanded="true" signature="2310:2337" ph="..." />
           </folding>
         </state>
       </provider>
@@ -524,7 +587,7 @@
         <state relative-caret-position="459">
           <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
           <folding>
-            <marker date="1480069007152" expanded="true" signature="1729:1756" ph="..." />
+            <marker date="1480416083093" expanded="true" signature="2274:2301" ph="..." />
           </folding>
         </state>
       </provider>
@@ -534,8 +597,7 @@
         <state relative-caret-position="629">
           <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="38" selection-end-column="37" />
           <folding>
-            <marker date="1480411258630" expanded="true" signature="1759:1786" ph="..." />
-            <marker date="1480411258630" expanded="true" signature="2041:2068" ph="..." />
+            <marker date="1480416813195" expanded="true" signature="2310:2337" ph="..." />
           </folding>
         </state>
       </provider>
@@ -585,6 +647,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="61" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -608,7 +671,7 @@
         <state relative-caret-position="459">
           <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
           <folding>
-            <marker date="1480069007152" expanded="true" signature="1729:1756" ph="..." />
+            <marker date="1480416083093" expanded="true" signature="2274:2301" ph="..." />
           </folding>
         </state>
       </provider>
@@ -618,8 +681,7 @@
         <state relative-caret-position="629">
           <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="38" selection-end-column="37" />
           <folding>
-            <marker date="1480411258630" expanded="true" signature="1759:1786" ph="..." />
-            <marker date="1480411258630" expanded="true" signature="2041:2068" ph="..." />
+            <marker date="1480416813195" expanded="true" signature="2310:2337" ph="..." />
           </folding>
         </state>
       </provider>
@@ -669,6 +731,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="61" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -695,38 +758,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/monitor/memory/memory.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/monitor/disk/disk.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
-          <folding>
-            <marker date="1480069007152" expanded="true" signature="1729:1756" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/monitor/memory/memory.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="75" column="44" lean-forward="true" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
-          <folding>
-            <marker date="1480411258630" expanded="true" signature="1759:1786" ph="..." />
-            <marker date="1480411258630" expanded="true" signature="2041:2068" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -762,6 +797,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/monitor/cpu/cpu.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="30" lean-forward="true" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+          <folding>
+            <marker date="1480413873938" expanded="true" signature="1948:1975" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/monitor/cpu/cpu.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -770,13 +815,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/monitor/cpu/cpu.controller.js">
+    <entry file="file://$PROJECT_DIR$/app/monitor/disk/disk.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="52" column="34" lean-forward="true" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+        <state relative-caret-position="0">
+          <caret line="0" column="60" lean-forward="false" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/monitor/disk/disk.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
           <folding>
-            <marker date="1480413873938" expanded="true" signature="1948:1975" ph="..." />
+            <marker date="1480416083093" expanded="true" signature="2274:2301" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/monitor/memory/memory.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+          <folding>
+            <marker date="1480416813195" expanded="true" signature="2310:2337" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/monitor/memory/memory.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="6" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>

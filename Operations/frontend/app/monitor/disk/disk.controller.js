@@ -9,12 +9,10 @@ angular.module('app')
         var diskFree;
         var diskUsed;
         var Time;
-        var totalDiskSpace = [];
-        var chartData = [];
+        var totalDiskSpace;
         var diskUsedPercentage = [];
-        var diskFreePercentage=[];
-
-        $scope.selectedHostnames = [];
+        $scope.showme = false;
+        $scope.selectedHostname = "";
 
         diskUsageService.list()
             .then(function (response) {
@@ -23,23 +21,36 @@ angular.module('app')
                 $scope.hostnames = Array.from(new Set(metrics.map(function(metric) {
                     return metric.hostName;
                 })));
-
-                diskFree = metrics.map(function(metric){
-                    return metric.kbDiskAvailable;
-                });
-
-                diskUsed = metrics.map(function(metric){
-                    return metric.kbDiskUsed;
-                });
-
-                Time = metrics.map(function(metric){
-                    return metric.time;
-                });
-
-                chart.dataProvider = generateChartData();
-                chart.validateData();
                 return response;
             });
+
+        $scope.showTheGraph = function () {
+            var chartData = [];
+            diskUsageService.listByHostname($scope.selectedHostname)
+                .then(function (response) {
+                    $scope.DiskMetrics = response.data;
+
+                    diskUsed = $scope.DiskMetrics.map(function (DiskMetric) {
+                        return DiskMetric.kbDiskUsed;
+                    });
+
+                    diskFree = $scope.DiskMetrics.map(function (DiskMetric) {
+                        return DiskMetric.kbDiskAvailable;
+                    });
+
+                    Time = $scope.DiskMetrics.map(function (DiskMetric) {
+                        return DiskMetric.time;
+                    });
+                    chart.dataProvider = generateChartData(chartData);
+                    chart.validateData();
+                });
+            $scope.showme = true;
+            return chartData;
+        };
+
+        $scope.hideTheGraph = function () {
+            $scope.showme = false;
+        };
 
 
         var chart = AmCharts.makeChart("chartdiv1", {
@@ -53,11 +64,12 @@ angular.module('app')
                 "title": "Disk Usage(%)"
             }],
             "graphs": [{
+                "id":"g1",
                 "fillAlphas": 0.5,
                 "lineAlpha": 0.5,
                 "title": "Disk Used",
-                "valueField": "DiskUsed",
-                "balloonText": "<div style='margin:5px; font-size:12px;'>Disk Used:<b>[[value]]</b></div>"
+                "valueField": "DiskUsedPercentage",
+                "balloonText": "<div style='margin:5px; font-size:12px;'>Disk Used:<b>[[DiskUsed]]kb, ([[value]]%)</b></div>"
             }],
             "chartScrollbar": {
                 "graph": "g1",
@@ -90,18 +102,16 @@ angular.module('app')
             }
         });
 
-        function generateChartData() {
+        function generateChartData(chartData) {
+
+            totalDiskSpace = diskUsed[0] + diskFree[0];
 
             for (var i = 0; i < Time.length; i++) {
-
-                totalDiskSpace[i] = diskUsed[i] + diskFree[i];
-
-                diskUsedPercentage[i] = (diskUsed[i]/totalDiskSpace[i])* 100;
-                diskFreePercentage[i] = 100 - diskUsedPercentage;
+                diskUsedPercentage[i] = (diskUsed[i]/totalDiskSpace)* 100;
                 chartData.push({
                     date: Time[i],
-                    DiskUsed: diskUsedPercentage[i],
-                    DiskFree: diskFreePercentage[i]
+                    DiskUsed:diskUsed[i],
+                    DiskUsedPercentage: diskUsedPercentage[i].toFixed(2)
                 });
             }
             return chartData;
