@@ -44,7 +44,7 @@ public class DiskUsageResource {
     }
 
     @DELETE
-    @Path("/{id}")
+    @Path("/{hostName}")
     public void deleteDiskUsage(@PathParam("hostName") String hostName) {
         this.diskUsageProcess.delete(hostName);
     }
