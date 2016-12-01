@@ -23,6 +23,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/app.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -142,6 +143,14 @@
                 <marker date="1480603088179" expanded="true" signature="11643:11670" ph="..." />
                 <marker date="1480603088179" expanded="true" signature="11720:11747" ph="..." />
               </folding>
+=======
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="54" lean-forward="false" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+              <folding />
+>>>>>>> origin/master
             </state>
           </provider>
         </entry>
@@ -218,6 +227,7 @@
         <option value="$PROJECT_DIR$/app/monitor/memory/memory.controller.js" />
         <option value="$PROJECT_DIR$/app/monitor/disk/disk.controller.js" />
         <option value="$PROJECT_DIR$/app/monitor/cpu/cpu.controller.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -232,10 +242,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1358" />
-    <option name="y" value="-317" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-7" />
+    <option name="width" value="1378" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -252,6 +261,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -407,7 +417,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -416,7 +425,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Project_SoftHouse/Notes Application/frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
@@ -535,37 +544,50 @@
       <workItem from="1480324751274" duration="5326000" />
       <workItem from="1480330435192" duration="6732000" />
       <workItem from="1480401800123" duration="1671000" />
+<<<<<<< HEAD
       <workItem from="1480410492670" duration="18355000" />
       <workItem from="1480493997009" duration="11920000" />
       <workItem from="1480517434367" duration="16576000" />
       <workItem from="1480595940893" duration="4267000" />
       <workItem from="1480600287421" duration="3255000" />
+=======
+      <workItem from="1480410492670" duration="7372000" />
+      <workItem from="1480503978288" duration="70000" />
+>>>>>>> origin/master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="194759000" />
+=======
+    <option name="totallyTimeSpent" value="147828000" />
+>>>>>>> origin/master
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-317" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="0" width="1378" height="775" extended-state="0" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16438356" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20631425" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> origin/master
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982087" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -612,24 +634,34 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
             <marker date="1480603184895" expanded="true" signature="8411:8438" ph="..." />
             <marker date="1480603184895" expanded="true" signature="8484:8511" ph="..." />
             <marker date="1480603184895" expanded="true" signature="8723:8750" ph="..." />
             <marker date="1480603184895" expanded="true" signature="8796:8823" ph="..." />
             <marker date="1480603184895" expanded="true" signature="9034:9061" ph="..." />
             <marker date="1480603184895" expanded="true" signature="9107:9134" ph="..." />
+=======
+            <marker date="1480503811317" expanded="true" signature="1948:1975" ph="..." />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="578">
           <caret line="34" column="7" lean-forward="true" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+=======
+        <state relative-caret-position="532">
+          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/service/cpuusage.service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -655,21 +687,84 @@
             <marker date="1480603184895" expanded="true" signature="8796:8823" ph="..." />
             <marker date="1480603184895" expanded="true" signature="9034:9061" ph="..." />
             <marker date="1480603184895" expanded="true" signature="9107:9134" ph="..." />
+=======
+    <entry file="file://$PROJECT_DIR$/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding>
+            <marker date="1480414745440" expanded="true" signature="851:1000" ph="{&quot;templateUrl&quot;: 'app/monitor/cpu/cpu.tpl'...}" />
+            <marker date="1480414745440" expanded="true" signature="957:994" ph="{&quot;onSubmit&quot;: '&lt;'...}" />
+            <marker date="1480414745440" expanded="true" signature="1025:1177" ph="{&quot;templateUrl&quot;: 'app/monitor/disk/disk.tpl'...}" />
+            <marker date="1480414745440" expanded="true" signature="1134:1171" ph="{&quot;onSubmit&quot;: '&lt;'...}" />
+            <marker date="1480414745440" expanded="true" signature="1204:1362" ph="{&quot;templateUrl&quot;: 'app/monitor/memory/memory.tpl'...}" />
+            <marker date="1480414745440" expanded="true" signature="1319:1356" ph="{&quot;onSubmit&quot;: '&lt;'...}" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/monitor/disk/disk.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding>
+            <marker date="1480503811322" expanded="true" signature="142:3900" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/monitor/memory/memory.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding>
+            <marker date="1480503811330" expanded="true" signature="3948:3954" ph="{...}" />
+>>>>>>> origin/master
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/service/cpuusage.service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/monitor/memory/memory.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/monitor/cpu/cpu.tpl">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="102">
           <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+=======
+        <state relative-caret-position="209">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/monitor/disk/disk.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="60" lean-forward="false" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
+          <folding />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -678,12 +773,16 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
             <marker date="1480603184895" expanded="true" signature="8411:8438" ph="..." />
             <marker date="1480603184895" expanded="true" signature="8484:8511" ph="..." />
             <marker date="1480603184895" expanded="true" signature="8723:8750" ph="..." />
             <marker date="1480603184895" expanded="true" signature="8796:8823" ph="..." />
             <marker date="1480603184895" expanded="true" signature="9034:9061" ph="..." />
             <marker date="1480603184895" expanded="true" signature="9107:9134" ph="..." />
+=======
+            <marker date="1480503811317" expanded="true" signature="1948:1975" ph="..." />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
@@ -693,12 +792,16 @@
         <state relative-caret-position="459">
           <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
           <folding>
+<<<<<<< HEAD
             <marker date="1480603088179" expanded="true" signature="10883:10910" ph="..." />
             <marker date="1480603088179" expanded="true" signature="10960:10987" ph="..." />
             <marker date="1480603088179" expanded="true" signature="11263:11290" ph="..." />
             <marker date="1480603088179" expanded="true" signature="11340:11367" ph="..." />
             <marker date="1480603088179" expanded="true" signature="11643:11670" ph="..." />
             <marker date="1480603088179" expanded="true" signature="11720:11747" ph="..." />
+=======
+            <marker date="1480503811322" expanded="true" signature="142:3900" ph="{...}" />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
@@ -708,12 +811,16 @@
         <state relative-caret-position="697">
           <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
             <marker date="1480603088117" expanded="true" signature="11041:11068" ph="..." />
             <marker date="1480603088117" expanded="true" signature="11118:11145" ph="..." />
             <marker date="1480603088117" expanded="true" signature="11430:11457" ph="..." />
             <marker date="1480603088117" expanded="true" signature="11507:11534" ph="..." />
             <marker date="1480603088117" expanded="true" signature="11819:11846" ph="..." />
             <marker date="1480603088117" expanded="true" signature="11896:11923" ph="..." />
+=======
+            <marker date="1480503811330" expanded="true" signature="3948:3954" ph="{...}" />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
@@ -731,12 +838,16 @@
         <state relative-caret-position="459">
           <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
           <folding>
+<<<<<<< HEAD
             <marker date="1480603088179" expanded="true" signature="10883:10910" ph="..." />
             <marker date="1480603088179" expanded="true" signature="10960:10987" ph="..." />
             <marker date="1480603088179" expanded="true" signature="11263:11290" ph="..." />
             <marker date="1480603088179" expanded="true" signature="11340:11367" ph="..." />
             <marker date="1480603088179" expanded="true" signature="11643:11670" ph="..." />
             <marker date="1480603088179" expanded="true" signature="11720:11747" ph="..." />
+=======
+            <marker date="1480503811322" expanded="true" signature="142:3900" ph="{...}" />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
@@ -746,12 +857,16 @@
         <state relative-caret-position="629">
           <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="38" selection-end-column="37" />
           <folding>
+<<<<<<< HEAD
             <marker date="1480603088117" expanded="true" signature="11041:11068" ph="..." />
             <marker date="1480603088117" expanded="true" signature="11118:11145" ph="..." />
             <marker date="1480603088117" expanded="true" signature="11430:11457" ph="..." />
             <marker date="1480603088117" expanded="true" signature="11507:11534" ph="..." />
             <marker date="1480603088117" expanded="true" signature="11819:11846" ph="..." />
             <marker date="1480603088117" expanded="true" signature="11896:11923" ph="..." />
+=======
+            <marker date="1480503811330" expanded="true" signature="3948:3954" ph="{...}" />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
@@ -761,16 +876,21 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
             <marker date="1480603184895" expanded="true" signature="8411:8438" ph="..." />
             <marker date="1480603184895" expanded="true" signature="8484:8511" ph="..." />
             <marker date="1480603184895" expanded="true" signature="8723:8750" ph="..." />
             <marker date="1480603184895" expanded="true" signature="8796:8823" ph="..." />
             <marker date="1480603184895" expanded="true" signature="9034:9061" ph="..." />
             <marker date="1480603184895" expanded="true" signature="9107:9134" ph="..." />
+=======
+            <marker date="1480503811317" expanded="true" signature="1948:1975" ph="..." />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/manage/manage.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -785,11 +905,22 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/app/manage/manage.tpl" />
+    <entry file="file://$PROJECT_DIR$/app/manage/manage.controller.js" />
+>>>>>>> origin/master
     <entry file="file://$PROJECT_DIR$/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding />
+          <folding>
+            <marker date="1480414745440" expanded="true" signature="851:1000" ph="{&quot;templateUrl&quot;: 'app/monitor/cpu/cpu.tpl'...}" />
+            <marker date="1480414745440" expanded="true" signature="957:994" ph="{&quot;onSubmit&quot;: '&lt;'...}" />
+            <marker date="1480414745440" expanded="true" signature="1025:1177" ph="{&quot;templateUrl&quot;: 'app/monitor/disk/disk.tpl'...}" />
+            <marker date="1480414745440" expanded="true" signature="1134:1171" ph="{&quot;onSubmit&quot;: '&lt;'...}" />
+            <marker date="1480414745440" expanded="true" signature="1204:1362" ph="{&quot;templateUrl&quot;: 'app/monitor/memory/memory.tpl'...}" />
+            <marker date="1480414745440" expanded="true" signature="1319:1356" ph="{&quot;onSubmit&quot;: '&lt;'...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -827,12 +958,16 @@
         <state relative-caret-position="459">
           <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
           <folding>
+<<<<<<< HEAD
             <marker date="1480603088179" expanded="true" signature="10883:10910" ph="..." />
             <marker date="1480603088179" expanded="true" signature="10960:10987" ph="..." />
             <marker date="1480603088179" expanded="true" signature="11263:11290" ph="..." />
             <marker date="1480603088179" expanded="true" signature="11340:11367" ph="..." />
             <marker date="1480603088179" expanded="true" signature="11643:11670" ph="..." />
             <marker date="1480603088179" expanded="true" signature="11720:11747" ph="..." />
+=======
+            <marker date="1480503811322" expanded="true" signature="142:3900" ph="{...}" />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
@@ -842,12 +977,16 @@
         <state relative-caret-position="629">
           <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="38" selection-end-column="37" />
           <folding>
+<<<<<<< HEAD
             <marker date="1480603088117" expanded="true" signature="11041:11068" ph="..." />
             <marker date="1480603088117" expanded="true" signature="11118:11145" ph="..." />
             <marker date="1480603088117" expanded="true" signature="11430:11457" ph="..." />
             <marker date="1480603088117" expanded="true" signature="11507:11534" ph="..." />
             <marker date="1480603088117" expanded="true" signature="11819:11846" ph="..." />
             <marker date="1480603088117" expanded="true" signature="11896:11923" ph="..." />
+=======
+            <marker date="1480503811330" expanded="true" signature="3948:3954" ph="{...}" />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
@@ -857,16 +996,21 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
             <marker date="1480603184895" expanded="true" signature="8411:8438" ph="..." />
             <marker date="1480603184895" expanded="true" signature="8484:8511" ph="..." />
             <marker date="1480603184895" expanded="true" signature="8723:8750" ph="..." />
             <marker date="1480603184895" expanded="true" signature="8796:8823" ph="..." />
             <marker date="1480603184895" expanded="true" signature="9034:9061" ph="..." />
             <marker date="1480603184895" expanded="true" signature="9107:9134" ph="..." />
+=======
+            <marker date="1480503811317" expanded="true" signature="1948:1975" ph="..." />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/manage/manage.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -881,11 +1025,22 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/app/manage/manage.tpl" />
+    <entry file="file://$PROJECT_DIR$/app/manage/manage.controller.js" />
+>>>>>>> origin/master
     <entry file="file://$PROJECT_DIR$/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding />
+          <folding>
+            <marker date="1480414745440" expanded="true" signature="851:1000" ph="{&quot;templateUrl&quot;: 'app/monitor/cpu/cpu.tpl'...}" />
+            <marker date="1480414745440" expanded="true" signature="957:994" ph="{&quot;onSubmit&quot;: '&lt;'...}" />
+            <marker date="1480414745440" expanded="true" signature="1025:1177" ph="{&quot;templateUrl&quot;: 'app/monitor/disk/disk.tpl'...}" />
+            <marker date="1480414745440" expanded="true" signature="1134:1171" ph="{&quot;onSubmit&quot;: '&lt;'...}" />
+            <marker date="1480414745440" expanded="true" signature="1204:1362" ph="{&quot;templateUrl&quot;: 'app/monitor/memory/memory.tpl'...}" />
+            <marker date="1480414745440" expanded="true" signature="1319:1356" ph="{&quot;onSubmit&quot;: '&lt;'...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -910,6 +1065,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/monitor/memory/memory.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -918,6 +1074,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/monitor/disk/disk.tpl">
+=======
+    <entry file="file://$PROJECT_DIR$/app/service/cpuusage.service.js">
+>>>>>>> origin/master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
@@ -938,6 +1097,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/service/diskusage.service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -949,6 +1109,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/monitor/cpu/cpu.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="25" column="6" lean-forward="false" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+          <folding />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -978,9 +1145,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="187">
           <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
           <folding />
+=======
+        <state relative-caret-position="522">
+          <caret line="119" column="7" lean-forward="false" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
+          <folding>
+            <marker date="1480503811322" expanded="true" signature="142:3900" ph="{...}" />
+          </folding>
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -994,39 +1169,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/navigation/navigation.tpl">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="306">
           <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
+=======
+        <state relative-caret-position="522">
+          <caret line="122" column="7" lean-forward="false" selection-start-line="122" selection-start-column="7" selection-end-line="122" selection-end-column="7" />
+          <folding>
+            <marker date="1480503811330" expanded="true" signature="3948:3954" ph="{...}" />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/introduction/introduction.tpl">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="102">
           <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+=======
+        <state relative-caret-position="494">
+          <caret line="26" column="6" lean-forward="false" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/manage/manage.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="886">
           <caret line="57" column="49" lean-forward="true" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="26" column="19" lean-forward="false" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+          <folding>
+            <marker date="1480414745440" expanded="true" signature="851:1000" ph="{&quot;templateUrl&quot;: 'app/monitor/cpu/cpu.tpl'...}" />
+            <marker date="1480414745440" expanded="true" signature="957:994" ph="{&quot;onSubmit&quot;: '&lt;'...}" />
+            <marker date="1480414745440" expanded="true" signature="1025:1177" ph="{&quot;templateUrl&quot;: 'app/monitor/disk/disk.tpl'...}" />
+            <marker date="1480414745440" expanded="true" signature="1134:1171" ph="{&quot;onSubmit&quot;: '&lt;'...}" />
+            <marker date="1480414745440" expanded="true" signature="1204:1362" ph="{&quot;templateUrl&quot;: 'app/monitor/memory/memory.tpl'...}" />
+            <marker date="1480414745440" expanded="true" signature="1319:1356" ph="{&quot;onSubmit&quot;: '&lt;'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/contactus/contactus.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="39" column="17" lean-forward="false" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-          <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/app/monitor/cpu/cpu.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="82" column="30" lean-forward="false" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
+          <folding>
+            <marker date="1480503811317" expanded="true" signature="1948:1975" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/manage/manage.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> origin/master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/manage/manage.controller.js">
+=======
+    <entry file="file://$PROJECT_DIR$/app/manage/manage.tpl">
+>>>>>>> origin/master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="759">
           <caret line="108" column="28" lean-forward="false" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
@@ -1034,6 +1264,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/monitor/memory/memory.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="708">
@@ -1076,6 +1307,13 @@
             <marker date="1480603184895" expanded="true" signature="9034:9061" ph="..." />
             <marker date="1480603184895" expanded="true" signature="9107:9134" ph="..." />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="54" lean-forward="false" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+          <folding />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
