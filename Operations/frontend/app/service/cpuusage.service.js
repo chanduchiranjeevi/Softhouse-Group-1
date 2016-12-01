@@ -18,7 +18,7 @@ function cpuUsageService($http, $interpolate) {
         return $http.get(cpu({hostName: hostname}));
     }
 
-    function destroyCpu(hostName){
+    function destroyCpu(hostname){
         return $http.delete(cpu({ hostName: hostname }))
     }
 
