@@ -5,7 +5,7 @@ kbMemoryFree="$(sar -r 1 1 | awk '{print $2}' | awk 'FNR == 4 {print}')"
 echo $kbMemoryFree
 l=$(echo “($kbMemoryFree/1000000)” | bc)
 m=$(echo “($kbMemoryFree%1000000)” | bc)
-n=$(echo “($l + 0.$m)” | bc)
+n=$(echo “($l + 0.$m)” | bc | awk '{printf "%f", $0}')
 echo $l
 echo $m
 echo $n
@@ -18,7 +18,7 @@ kbMemoryUsed="$(sar -r 1 1 | awk '{print $3}' |awk 'FNR == 4 {print}')"
 echo $kbMemoryUsed
 a=$(echo “($kbMemoryUsed/1000000)” | bc)
 b=$(echo “($kbMemoryUsed%1000000)” | bc)
-c=$(echo “($a + 0.$b)” | bc)
+c=$(echo “($a + 0.$b)” | bc | awk '{printf "%f", $0}')
 echo $a
 echo $b
 echo $c

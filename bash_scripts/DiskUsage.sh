@@ -4,7 +4,7 @@ kbDiskAvailable="$(df ~/ | awk '{print $4}' | awk 'FNR == 2 {print}')"
 echo $kbDiskAvailable
 l=$(echo “($kbDiskAvailable/1000000)” | bc)
 m=$(echo “($kbDiskAvailable%1000000)” | bc)
-n=$(echo “($l + 0.$m)” | bc)
+n=$(echo “($l + 0.$m)” | bc | awk '{printf "%f", $0}')
 echo $l
 echo $m
 echo $n
@@ -16,7 +16,7 @@ kbDiskUsed="$(df ~/ | awk '{print $3}' | awk 'FNR == 2 {print}')"
 echo $kbDiskUsed
 a=$(echo “($kbDiskUsed/1000000)” | bc)
 b=$(echo “($kbDiskUsed%1000000)” | bc)
-c=$(echo “($a + 0.$b)” | bc)
+c=$(echo “($a + 0.$b)” | bc | awk '{printf "%f", $0}')
 echo $a
 echo $b
 echo $c
