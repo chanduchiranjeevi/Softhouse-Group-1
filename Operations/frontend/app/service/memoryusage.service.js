@@ -18,8 +18,8 @@ function memoryUsageService($http, $interpolate) {
         return $http.get(memory({hostName: hostname}));
     }
 
-    function destroyMemory(hostName){
-        return $http.delete(memory({ hostName: hostName }))
+    function destroyMemory(hostname){
+        return $http.delete(memory({ hostName: hostname }))
     }
 
 }

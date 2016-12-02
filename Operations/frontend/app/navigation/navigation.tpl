@@ -5,9 +5,8 @@
 <nav class="navbar navbar-inverse navbar" role="navigation">
     <div class="col-xs-11">
         <ul class="nav navbar-nav">
-            <li><a ng-href="#/">Home</a></li>
-            <li><a ng-href="#/manage">Server Manager</a></li>>
-            <li><a ng-href="#/monitor">Server Statistics Monitor</a></li>
+            <li><a ng-href="#/">Server Statistics Monitor</a></li>
+            <li><a ng-href="#/manage">Server Manager</a></li>
             <li><a ng-href="#/contactus">Contact Us</a></li>
         </ul>
     </div>

@@ -18,8 +18,8 @@ function diskUsageService($http, $interpolate) {
         return $http.get(disk({hostName: hostname}));
     }
 
-    function destroyDisk(hostName){
-        return $http.delete(disk( { hostName: hostName}))
+    function destroyDisk(hostname){
+        return $http.delete(disk( { hostName: hostname}))
     }
 
 }
