@@ -26,42 +26,29 @@ angular.module('app')
             });
 
         $scope.showTheGraph = function () {
-            var chartData = [];
-            var promises = [];
-            for (i = 0; i < $scope.selectedHostnames.length; i++) {
-                promises.push(memoryUsageService.listByHostname($scope.selectedHostnames[i]));
-            }
-            $q.all(promises).then(function (response) {
-                for (i = 0; i < response.length; i++) {
-                    $scope.MemoryMetrics = response[i].data;
+            if ($scope.selectedHostnames.length != 0){
+                var chartData = [];
+                var promises = [];
+                for (i = 0; i < $scope.selectedHostnames.length; i++) {
+                    promises.push(memoryUsageService.listByHostname($scope.selectedHostnames[i]));
+                }
+                $q.all(promises).then(function (response) {
+                    for (i = 0; i < response.length; i++) {
+                        $scope.MemoryMetrics = response[i].data;
 
-                    memoryFree = $scope.MemoryMetrics.map(function (memoryMetric) {
-                        return memoryMetric.kbMemoryFree;
-                    });
+                        memoryFree = $scope.MemoryMetrics.map(function (memoryMetric) {
+                            return memoryMetric.kbMemoryFree;
+                        });
 
-                    memoryUsed = $scope.MemoryMetrics.map(function (memoryMetric) {
-                        return memoryMetric.kbMemoryUsed;
-                    });
+                        memoryUsed = $scope.MemoryMetrics.map(function (memoryMetric) {
+                            return memoryMetric.kbMemoryUsed;
+                        });
 
-                    Time = $scope.MemoryMetrics.map(function (memoryMetric) {
-                        return memoryMetric.time;
-                    });
+                        Time = $scope.MemoryMetrics.map(function (memoryMetric) {
+                            return memoryMetric.time;
+                        });
 
-                    if (response.length == 1){
-                        totalMemory = memoryUsed[0] + memoryFree[0];
-                        for (j = 0; j < Time.length; j++) {
-                            memoryUsedPercentage[j] = (memoryUsed[j]/totalMemory)* 100;
-                            Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
-                            chartData.push({
-                                date: Time[j],
-                                host0: $scope.selectedHostnames[0],
-                                MemoryUsed0: memoryUsed[j],
-                                MemoryUsedPercentage0: memoryUsedPercentage[j].toFixed(2)
-                            });
-                        }
-                    }
-                    else if (response.length == 2){
-                        if (i == 0) {
+                        if (response.length == 1){
                             totalMemory = memoryUsed[0] + memoryFree[0];
                             for (j = 0; j < Time.length; j++) {
                                 memoryUsedPercentage[j] = (memoryUsed[j]/totalMemory)* 100;
@@ -69,131 +56,146 @@ angular.module('app')
                                 chartData.push({
                                     date: Time[j],
                                     host0: $scope.selectedHostnames[0],
-                                    MemoryUsed0:memoryUsed[j],
-                                    MemoryUsedPercentage0: memoryUsedPercentage[j].toFixed(2),
-                                    host1: $scope.selectedHostnames[1],
-                                    MemoryUsed1: 0,
-                                    MemoryUsedPercentage1: 0
+                                    MemoryUsed0: memoryUsed[j].toFixed(2),
+                                    MemoryUsedPercentage0: memoryUsedPercentage[j].toFixed(2)
                                 });
                             }
                         }
-                        else if (i == 1){
-                            totalMemory = memoryUsed[0] + memoryFree[0];
-                            for (j = 0; j < Time.length; j++) {
-                                memoryUsedPercentage[j] = (memoryUsed[j]/totalMemory)* 100;
-                                Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
-                                for (k = 0; k < chartData.length; k++) {
-                                    if (Time[j] == chartData[k].date) {
-                                        match = true;
-                                        chartData[k].MemoryUsed1 = memoryUsed[j];
-                                        chartData[k].MemoryUsedPercentage1 = memoryUsedPercentage[j].toFixed(2);
-                                        break;
-                                    }
-                                }
-                                if (match == false) {
+                        else if (response.length == 2){
+                            if (i == 0) {
+                                totalMemory = memoryUsed[0] + memoryFree[0];
+                                for (j = 0; j < Time.length; j++) {
+                                    memoryUsedPercentage[j] = (memoryUsed[j]/totalMemory)* 100;
+                                    Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
                                     chartData.push({
                                         date: Time[j],
                                         host0: $scope.selectedHostnames[0],
-                                        MemoryUsed0: 0,
-                                        MemoryUsedPercentage0: 0,
+                                        MemoryUsed0:memoryUsed[j].toFixed(2),
+                                        MemoryUsedPercentage0: memoryUsedPercentage[j].toFixed(2),
                                         host1: $scope.selectedHostnames[1],
-                                        MemoryUsed1: memoryUsed[j],
-                                        MemoryUsedPercentage1: memoryUsedPercentage[j].toFixed(2)
+                                        MemoryUsed1: 0,
+                                        MemoryUsedPercentage1: 0
                                     });
-                                } else {
-                                    match = false;
                                 }
                             }
-                        }
-                    }
-                    else if (response.length == 3){
-                        if (i == 0) {
-                            totalMemory = memoryUsed[0] + memoryFree[0];
-                            for (j = 0; j < Time.length; j++) {
-                                memoryUsedPercentage[j] = (memoryUsed[j]/totalMemory)* 100;
-                                Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
-                                chartData.push({
-                                    date: Time[j],
-                                    host0: $scope.selectedHostnames[0],
-                                    MemoryUsed0: memoryUsed[j],
-                                    MemoryUsedPercentage0: memoryUsedPercentage[j].toFixed(2),
-                                    host1: $scope.selectedHostnames[1],
-                                    MemoryUsed1: 0,
-                                    MemoryUsedPercentage1: 0,
-                                    host2: $scope.selectedHostnames[2],
-                                    MemoryUsed2: 0,
-                                    MemoryUsedPercentage2: 0
-                                });
-                            }
-                        }
-                        else if (i == 1){
-                            totalMemory = memoryUsed[0] + memoryFree[0];
-                            for (j = 0; j < Time.length; j++) {
-                                memoryUsedPercentage[j] = (memoryUsed[j]/totalMemory)* 100;
-                                Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
-                                for (k = 0; k < chartData.length; k++) {
-                                    if (Time[j] == chartData[k].date) {
-                                        match = true;
-                                        chartData[k].MemoryUsed1 = memoryUsed[j];
-                                        chartData[k].MemoryUsedPercentage1 = memoryUsedPercentage[j].toFixed(2);
-                                        break;
+                            else if (i == 1){
+                                totalMemory = memoryUsed[0] + memoryFree[0];
+                                for (j = 0; j < Time.length; j++) {
+                                    memoryUsedPercentage[j] = (memoryUsed[j]/totalMemory)* 100;
+                                    Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
+                                    for (k = 0; k < chartData.length; k++) {
+                                        if (Time[j] == chartData[k].date) {
+                                            match = true;
+                                            chartData[k].MemoryUsed1 = memoryUsed[j].toFixed(2);
+                                            chartData[k].MemoryUsedPercentage1 = memoryUsedPercentage[j].toFixed(2);
+                                            break;
+                                        }
+                                    }
+                                    if (match == false) {
+                                        chartData.push({
+                                            date: Time[j],
+                                            host0: $scope.selectedHostnames[0],
+                                            MemoryUsed0: 0,
+                                            MemoryUsedPercentage0: 0,
+                                            host1: $scope.selectedHostnames[1],
+                                            MemoryUsed1: memoryUsed[j].toFixed(2),
+                                            MemoryUsedPercentage1: memoryUsedPercentage[j].toFixed(2)
+                                        });
+                                    } else {
+                                        match = false;
                                     }
                                 }
-                                if (match == false) {
+                            }
+                        }
+                        else if (response.length == 3){
+                            if (i == 0) {
+                                totalMemory = memoryUsed[0] + memoryFree[0];
+                                for (j = 0; j < Time.length; j++) {
+                                    memoryUsedPercentage[j] = (memoryUsed[j]/totalMemory)* 100;
+                                    Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
                                     chartData.push({
                                         date: Time[j],
                                         host0: $scope.selectedHostnames[0],
-                                        MemoryUsed0: 0,
-                                        MemoryUsedPercentage0: 0,
-                                        host1: $scope.selectedHostnames[1],
-                                        MemoryUsed1: memoryUsed[j],
-                                        MemoryUsedPercentage1: memoryUsedPercentage[j].toFixed(2),
-                                        host2: $scope.selectedHostnames[2],
-                                        MemoryUsed2: 0,
-                                        MemoryUsedPercentage2: 0
-                                    });
-                                } else {
-                                    match = false;
-                                }
-                            }
-                        }
-                        else if (i == 2) {
-                            totalMemory = memoryUsed[0] + memoryFree[0];
-                            for (j = 0; j < Time.length; j++) {
-                                memoryUsedPercentage[j] = (memoryUsed[j]/totalMemory)* 100;
-                                Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
-                                for (k = 0; k < chartData.length; k++) {
-                                    if (Time[j] == chartData[k].date) {
-                                        match = true;
-                                        chartData[k].MemoryUsed2 = memoryUsed[j];
-                                        chartData[k].MemoryUsedPercentage2 = memoryUsedPercentage[j].toFixed(2);
-                                        break;
-                                    }
-                                }
-                                if (match == false) {
-                                    chartData.push({
-                                        date: Time[j],
-                                        host0: $scope.selectedHostnames[0],
-                                        MemoryUsed0: 0,
-                                        MemoryUsedPercentage0: 0,
+                                        MemoryUsed0: memoryUsed[j].toFixed(2),
+                                        MemoryUsedPercentage0: memoryUsedPercentage[j].toFixed(2),
                                         host1: $scope.selectedHostnames[1],
                                         MemoryUsed1: 0,
                                         MemoryUsedPercentage1: 0,
                                         host2: $scope.selectedHostnames[2],
-                                        MemoryUsed2: memoryUsed[j],
-                                        MemoryUsedPercentage2: memoryUsedPercentage[j].toFixed(2)
+                                        MemoryUsed2: 0,
+                                        MemoryUsedPercentage2: 0
                                     });
-                                } else {
-                                    match = false;
+                                }
+                            }
+                            else if (i == 1){
+                                totalMemory = memoryUsed[0] + memoryFree[0];
+                                for (j = 0; j < Time.length; j++) {
+                                    memoryUsedPercentage[j] = (memoryUsed[j]/totalMemory)* 100;
+                                    Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
+                                    for (k = 0; k < chartData.length; k++) {
+                                        if (Time[j] == chartData[k].date) {
+                                            match = true;
+                                            chartData[k].MemoryUsed1 = memoryUsed[j].toFixed(2);
+                                            chartData[k].MemoryUsedPercentage1 = memoryUsedPercentage[j].toFixed(2);
+                                            break;
+                                        }
+                                    }
+                                    if (match == false) {
+                                        chartData.push({
+                                            date: Time[j],
+                                            host0: $scope.selectedHostnames[0],
+                                            MemoryUsed0: 0,
+                                            MemoryUsedPercentage0: 0,
+                                            host1: $scope.selectedHostnames[1],
+                                            MemoryUsed1: memoryUsed[j].toFixed(2),
+                                            MemoryUsedPercentage1: memoryUsedPercentage[j].toFixed(2),
+                                            host2: $scope.selectedHostnames[2],
+                                            MemoryUsed2: 0,
+                                            MemoryUsedPercentage2: 0
+                                        });
+                                    } else {
+                                        match = false;
+                                    }
+                                }
+                            }
+                            else if (i == 2) {
+                                totalMemory = memoryUsed[0] + memoryFree[0];
+                                for (j = 0; j < Time.length; j++) {
+                                    memoryUsedPercentage[j] = (memoryUsed[j]/totalMemory)* 100;
+                                    Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
+                                    for (k = 0; k < chartData.length; k++) {
+                                        if (Time[j] == chartData[k].date) {
+                                            match = true;
+                                            chartData[k].MemoryUsed2 = memoryUsed[j].toFixed(2);
+                                            chartData[k].MemoryUsedPercentage2 = memoryUsedPercentage[j].toFixed(2);
+                                            break;
+                                        }
+                                    }
+                                    if (match == false) {
+                                        chartData.push({
+                                            date: Time[j],
+                                            host0: $scope.selectedHostnames[0],
+                                            MemoryUsed0: 0,
+                                            MemoryUsedPercentage0: 0,
+                                            host1: $scope.selectedHostnames[1],
+                                            MemoryUsed1: 0,
+                                            MemoryUsedPercentage1: 0,
+                                            host2: $scope.selectedHostnames[2],
+                                            MemoryUsed2: memoryUsed[j].toFixed(2),
+                                            MemoryUsedPercentage2: memoryUsedPercentage[j].toFixed(2)
+                                        });
+                                    } else {
+                                        match = false;
+                                    }
                                 }
                             }
                         }
                     }
-                }
-                $scope.showGraph = true;
-                chart.dataProvider = chartData;
-                chart.validateData();
-            });
+                    $scope.showGraph = true;
+                    chart.dataProvider = chartData;
+                    chart.validateData();
+                });
+            }
         };
 
         $scope.hideTheGraph = function () {

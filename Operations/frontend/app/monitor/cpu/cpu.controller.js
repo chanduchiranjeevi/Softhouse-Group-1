@@ -21,142 +21,144 @@ angular.module('app')
             });
 
         $scope.showTheGraph = function () {
-            $scope.chartData = [];
-            var promises = [];
-            for (i = 0; i < $scope.selectedHostnames.length; i++){
-                promises.push(cpuUsageService.listByHostname($scope.selectedHostnames[i]));
-            }
-            $q.all(promises).then(function (response) {
-                for (var i = 0; i < response.length; i++) {
-                    var CpuMetrics = response[i].data;
-                    var cpuUsage = [];
-                    var Time = [];
-                    cpuUsage = CpuMetrics.map(function (CpuMetric) {
-                        return CpuMetric.percentageCpu;
-                    });
+            if ($scope.selectedHostnames.length != 0){
+                $scope.chartData = [];
+                var promises = [];
+                for (i = 0; i < $scope.selectedHostnames.length; i++){
+                    promises.push(cpuUsageService.listByHostname($scope.selectedHostnames[i]));
+                }
+                $q.all(promises).then(function (response) {
+                    for (var i = 0; i < response.length; i++) {
+                        var CpuMetrics = response[i].data;
+                        var cpuUsage = [];
+                        var Time = [];
+                        cpuUsage = CpuMetrics.map(function (CpuMetric) {
+                            return CpuMetric.percentageCpu;
+                        });
 
-                    Time = CpuMetrics.map(function (CpuMetric) {
-                        return CpuMetric.time;
-                    });
+                        Time = CpuMetrics.map(function (CpuMetric) {
+                            return CpuMetric.time;
+                        });
 
-                    if (response.length == 1){
-                        for (j = 0; j < Time.length; j++) {
-                            Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
-                            $scope.chartData.push({
-                                date: Time[j],
-                                host0: $scope.selectedHostnames[0],
-                                CpuUsage0: cpuUsage[j]
-                            });
-                        }
-                    }
-                    else if (response.length == 2){
-                        if (i == 0) {
+                        if (response.length == 1){
                             for (j = 0; j < Time.length; j++) {
                                 Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
                                 $scope.chartData.push({
                                     date: Time[j],
                                     host0: $scope.selectedHostnames[0],
-                                    CpuUsage0: cpuUsage[j],
-                                    host1: $scope.selectedHostnames[1],
-                                    CpuUsage1: 0
+                                    CpuUsage0: cpuUsage[j]
                                 });
                             }
                         }
-                        else if (i == 1){
-                            for (j = 0; j < Time.length; j++) {
-                                Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
-                                for (k = 0; k < $scope.chartData.length; k++) {
-                                    if (Time[j] == $scope.chartData[k].date) {
-                                        match = true;
-                                        $scope.chartData[k].CpuUsage1 = cpuUsage[j];
-                                        break;
-                                    }
-                                }
-                                if (match == false) {
+                        else if (response.length == 2){
+                            if (i == 0) {
+                                for (j = 0; j < Time.length; j++) {
+                                    Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
                                     $scope.chartData.push({
                                         date: Time[j],
                                         host0: $scope.selectedHostnames[0],
-                                        CpuUsage0: 0,
+                                        CpuUsage0: cpuUsage[j],
                                         host1: $scope.selectedHostnames[1],
-                                        CpuUsage1: cpuUsage[j]
+                                        CpuUsage1: 0
                                     });
-                                } else {
-                                    match = false;
                                 }
                             }
-                        }
-                    }
-                    else if (response.length == 3){
-                        if (i == 0) {
-                            for (j = 0; j < Time.length; j++) {
-                                Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
-                                $scope.chartData.push({
-                                    date: Time[j],
-                                    host0: $scope.selectedHostnames[0],
-                                    CpuUsage0: cpuUsage[j],
-                                    host1: $scope.selectedHostnames[1],
-                                    CpuUsage1: 0,
-                                    host2: $scope.selectedHostnames[2],
-                                    CpuUsage2: 0
-                                });
-                            }
-                        }
-                        else if (i == 1){
-                            for (j = 0; j < Time.length; j++) {
-                                Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
-                                for (var k = 0; k < $scope.chartData.length; k++) {
-                                    if (Time[j] == $scope.chartData[k].date) {
-                                        match = true;
-                                        $scope.chartData[k].CpuUsage1 = cpuUsage[j];
-                                        break;
+                            else if (i == 1){
+                                for (j = 0; j < Time.length; j++) {
+                                    Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
+                                    for (k = 0; k < $scope.chartData.length; k++) {
+                                        if (Time[j] == $scope.chartData[k].date) {
+                                            match = true;
+                                            $scope.chartData[k].CpuUsage1 = cpuUsage[j];
+                                            break;
+                                        }
+                                    }
+                                    if (match == false) {
+                                        $scope.chartData.push({
+                                            date: Time[j],
+                                            host0: $scope.selectedHostnames[0],
+                                            CpuUsage0: 0,
+                                            host1: $scope.selectedHostnames[1],
+                                            CpuUsage1: cpuUsage[j]
+                                        });
+                                    } else {
+                                        match = false;
                                     }
                                 }
-                                if (match == false) {
+                            }
+                        }
+                        else if (response.length == 3){
+                            if (i == 0) {
+                                for (j = 0; j < Time.length; j++) {
+                                    Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
                                     $scope.chartData.push({
                                         date: Time[j],
                                         host0: $scope.selectedHostnames[0],
-                                        CpuUsage0: 0,
-                                        host1: $scope.selectedHostnames[1],
-                                        CpuUsage1: cpuUsage[j],
-                                        host2: $scope.selectedHostnames[2],
-                                        CpuUsage2: 0
-                                    });
-                                } else {
-                                    match = false;
-                                }
-                            }
-                        }
-                        else if (i == 2) {
-                            for (j = 0; j < Time.length; j++) {
-                                Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
-                                for (k = 0; k < $scope.chartData.length; k++) {
-                                    if (Time[j] == $scope.chartData[k].date) {
-                                        match = true;
-                                        $scope.chartData[k].CpuUsage2 = cpuUsage[j];
-                                        break;
-                                    }
-                                }
-                                if (match == false) {
-                                    $scope.chartData.push({
-                                        date: Time[j],
-                                        host0: $scope.selectedHostnames[0],
-                                        CpuUsage0: 0,
+                                        CpuUsage0: cpuUsage[j],
                                         host1: $scope.selectedHostnames[1],
                                         CpuUsage1: 0,
                                         host2: $scope.selectedHostnames[2],
-                                        CpuUsage2: cpuUsage[j]
+                                        CpuUsage2: 0
                                     });
-                                } else {
-                                    match = false;
+                                }
+                            }
+                            else if (i == 1){
+                                for (j = 0; j < Time.length; j++) {
+                                    Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
+                                    for (var k = 0; k < $scope.chartData.length; k++) {
+                                        if (Time[j] == $scope.chartData[k].date) {
+                                            match = true;
+                                            $scope.chartData[k].CpuUsage1 = cpuUsage[j];
+                                            break;
+                                        }
+                                    }
+                                    if (match == false) {
+                                        $scope.chartData.push({
+                                            date: Time[j],
+                                            host0: $scope.selectedHostnames[0],
+                                            CpuUsage0: 0,
+                                            host1: $scope.selectedHostnames[1],
+                                            CpuUsage1: cpuUsage[j],
+                                            host2: $scope.selectedHostnames[2],
+                                            CpuUsage2: 0
+                                        });
+                                    } else {
+                                        match = false;
+                                    }
+                                }
+                            }
+                            else if (i == 2) {
+                                for (j = 0; j < Time.length; j++) {
+                                    Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
+                                    for (k = 0; k < $scope.chartData.length; k++) {
+                                        if (Time[j] == $scope.chartData[k].date) {
+                                            match = true;
+                                            $scope.chartData[k].CpuUsage2 = cpuUsage[j];
+                                            break;
+                                        }
+                                    }
+                                    if (match == false) {
+                                        $scope.chartData.push({
+                                            date: Time[j],
+                                            host0: $scope.selectedHostnames[0],
+                                            CpuUsage0: 0,
+                                            host1: $scope.selectedHostnames[1],
+                                            CpuUsage1: 0,
+                                            host2: $scope.selectedHostnames[2],
+                                            CpuUsage2: cpuUsage[j]
+                                        });
+                                    } else {
+                                        match = false;
+                                    }
                                 }
                             }
                         }
                     }
-                }
-                $scope.showGraph = true;
-                chart.dataProvider = $scope.chartData;
-                chart.validateData();
-            });
+                    $scope.showGraph = true;
+                    chart.dataProvider = $scope.chartData;
+                    chart.validateData();
+                });
+            }
         };
 
         $scope.hideTheGraph = function () {

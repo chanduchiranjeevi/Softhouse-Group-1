@@ -26,42 +26,29 @@ angular.module('app')
             });
 
         $scope.showTheGraph = function () {
-            var chartData = [];
-            var promises = [];
-            for (i = 0; i < $scope.selectedHostnames.length; i++) {
-                promises.push(diskUsageService.listByHostname($scope.selectedHostnames[i]));
-            }
-            $q.all(promises).then(function (response) {
-                for (i = 0; i < response.length; i++) {
-                    $scope.DiskMetrics = response[i].data;
+            if ($scope.selectedHostnames.length != 0){
+                var chartData = [];
+                var promises = [];
+                for (i = 0; i < $scope.selectedHostnames.length; i++) {
+                    promises.push(diskUsageService.listByHostname($scope.selectedHostnames[i]));
+                }
+                $q.all(promises).then(function (response) {
+                    for (i = 0; i < response.length; i++) {
+                        $scope.DiskMetrics = response[i].data;
 
-                    diskUsed = $scope.DiskMetrics.map(function (DiskMetric) {
-                        return DiskMetric.kbDiskUsed;
-                    });
+                        diskUsed = $scope.DiskMetrics.map(function (DiskMetric) {
+                            return DiskMetric.kbDiskUsed;
+                        });
 
-                    diskFree = $scope.DiskMetrics.map(function (DiskMetric) {
-                        return DiskMetric.kbDiskAvailable;
-                    });
+                        diskFree = $scope.DiskMetrics.map(function (DiskMetric) {
+                            return DiskMetric.kbDiskAvailable;
+                        });
 
-                    Time = $scope.DiskMetrics.map(function (DiskMetric) {
-                        return DiskMetric.time;
-                    });
+                        Time = $scope.DiskMetrics.map(function (DiskMetric) {
+                            return DiskMetric.time;
+                        });
 
-                    if (response.length == 1){
-                        totalDiskSpace = diskUsed[0] + diskFree[0];
-                        for (j = 0; j < Time.length; j++) {
-                            diskUsedPercentage[j] = (diskUsed[j]/totalDiskSpace)* 100;
-                            Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
-                            chartData.push({
-                                date: Time[j],
-                                host0: $scope.selectedHostnames[0],
-                                DiskUsed0:diskUsed[j],
-                                DiskUsedPercentage0: diskUsedPercentage[j].toFixed(2)
-                            });
-                        }
-                    }
-                    else if (response.length == 2){
-                        if (i == 0) {
+                        if (response.length == 1){
                             totalDiskSpace = diskUsed[0] + diskFree[0];
                             for (j = 0; j < Time.length; j++) {
                                 diskUsedPercentage[j] = (diskUsed[j]/totalDiskSpace)* 100;
@@ -69,131 +56,146 @@ angular.module('app')
                                 chartData.push({
                                     date: Time[j],
                                     host0: $scope.selectedHostnames[0],
-                                    DiskUsed0:diskUsed[j],
-                                    DiskUsedPercentage0: diskUsedPercentage[j].toFixed(2),
-                                    host1: $scope.selectedHostnames[1],
-                                    DiskUsed1: 0,
-                                    DiskUsedPercentage1: 0
+                                    DiskUsed0:diskUsed[j].toFixed(2),
+                                    DiskUsedPercentage0: diskUsedPercentage[j].toFixed(2)
                                 });
                             }
                         }
-                        else if (i == 1){
-                            totalDiskSpace = diskUsed[0] + diskFree[0];
-                            for (j = 0; j < Time.length; j++) {
-                                diskUsedPercentage[j] = (diskUsed[j]/totalDiskSpace)* 100;
-                                Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
-                                for (k = 0; k < chartData.length; k++) {
-                                    if (Time[j] == chartData[k].date) {
-                                        match = true;
-                                        chartData[k].DiskUsed1 = diskUsed[j];
-                                        chartData[k].DiskUsedPercentage1 = diskUsedPercentage[j].toFixed(2);
-                                        break;
-                                    }
-                                }
-                                if (match == false) {
+                        else if (response.length == 2){
+                            if (i == 0) {
+                                totalDiskSpace = diskUsed[0] + diskFree[0];
+                                for (j = 0; j < Time.length; j++) {
+                                    diskUsedPercentage[j] = (diskUsed[j]/totalDiskSpace)* 100;
+                                    Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
                                     chartData.push({
                                         date: Time[j],
                                         host0: $scope.selectedHostnames[0],
-                                        DiskUsed0: 0,
-                                        DiskUsedPercentage0: 0,
+                                        DiskUsed0:diskUsed[j].toFixed(2),
+                                        DiskUsedPercentage0: diskUsedPercentage[j].toFixed(2),
                                         host1: $scope.selectedHostnames[1],
-                                        DiskUsed1: diskUsed[j],
-                                        DiskUsedPercentage1: diskUsedPercentage[j].toFixed(2)
+                                        DiskUsed1: 0,
+                                        DiskUsedPercentage1: 0
                                     });
-                                } else {
-                                    match = false;
                                 }
                             }
-                        }
-                    }
-                    else if (response.length == 3){
-                        if (i == 0) {
-                            totalDiskSpace = diskUsed[0] + diskFree[0];
-                            for (j = 0; j < Time.length; j++) {
-                                diskUsedPercentage[j] = (diskUsed[j]/totalDiskSpace)* 100;
-                                Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
-                                chartData.push({
-                                    date: Time[j],
-                                    host0: $scope.selectedHostnames[0],
-                                    DiskUsed0: diskUsed[j],
-                                    DiskUsedPercentage0: diskUsedPercentage[j].toFixed(2),
-                                    host1: $scope.selectedHostnames[1],
-                                    DiskUsed1: 0,
-                                    DiskUsedPercentage1: 0,
-                                    host2: $scope.selectedHostnames[2],
-                                    DiskUsed2: 0,
-                                    DiskUsedPercentage2: 0
-                                });
-                            }
-                        }
-                        else if (i == 1){
-                            totalDiskSpace = diskUsed[0] + diskFree[0];
-                            for (j = 0; j < Time.length; j++) {
-                                diskUsedPercentage[j] = (diskUsed[j]/totalDiskSpace)* 100;
-                                Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
-                                for (k = 0; k < chartData.length; k++) {
-                                    if (Time[j] == chartData[k].date) {
-                                        match = true;
-                                        chartData[k].DiskUsed1 = diskUsed[j];
-                                        chartData[k].DiskUsedPercentage1 = diskUsedPercentage[j].toFixed(2);
-                                        break;
+                            else if (i == 1){
+                                totalDiskSpace = diskUsed[0] + diskFree[0];
+                                for (j = 0; j < Time.length; j++) {
+                                    diskUsedPercentage[j] = (diskUsed[j]/totalDiskSpace)* 100;
+                                    Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
+                                    for (k = 0; k < chartData.length; k++) {
+                                        if (Time[j] == chartData[k].date) {
+                                            match = true;
+                                            chartData[k].DiskUsed1 = diskUsed[j].toFixed(2);
+                                            chartData[k].DiskUsedPercentage1 = diskUsedPercentage[j].toFixed(2);
+                                            break;
+                                        }
+                                    }
+                                    if (match == false) {
+                                        chartData.push({
+                                            date: Time[j],
+                                            host0: $scope.selectedHostnames[0],
+                                            DiskUsed0: 0,
+                                            DiskUsedPercentage0: 0,
+                                            host1: $scope.selectedHostnames[1],
+                                            DiskUsed1: diskUsed[j].toFixed(2),
+                                            DiskUsedPercentage1: diskUsedPercentage[j].toFixed(2)
+                                        });
+                                    } else {
+                                        match = false;
                                     }
                                 }
-                                if (match == false) {
+                            }
+                        }
+                        else if (response.length == 3){
+                            if (i == 0) {
+                                totalDiskSpace = diskUsed[0] + diskFree[0];
+                                for (j = 0; j < Time.length; j++) {
+                                    diskUsedPercentage[j] = (diskUsed[j]/totalDiskSpace)* 100;
+                                    Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
                                     chartData.push({
                                         date: Time[j],
                                         host0: $scope.selectedHostnames[0],
-                                        DiskUsed0: 0,
-                                        DiskUsedPercentage0: 0,
-                                        host1: $scope.selectedHostnames[1],
-                                        DiskUsed1: diskUsed[j],
-                                        DiskUsedPercentage1: diskUsedPercentage[j].toFixed(2),
-                                        host2: $scope.selectedHostnames[2],
-                                        DiskUsed2: 0,
-                                        DiskUsedPercentage2: 0
-                                    });
-                                } else {
-                                    match = false;
-                                }
-                            }
-                        }
-                        else if (i == 2) {
-                            totalDiskSpace = diskUsed[0] + diskFree[0];
-                            for (j = 0; j < Time.length; j++) {
-                                diskUsedPercentage[j] = (diskUsed[j]/totalDiskSpace)* 100;
-                                Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
-                                for (k = 0; k < chartData.length; k++) {
-                                    if (Time[j] == chartData[k].date) {
-                                        match = true;
-                                        chartData[k].DiskUsed2 = diskUsed[j];
-                                        chartData[k].DiskUsedPercentage2 = diskUsedPercentage[j].toFixed(2);
-                                        break;
-                                    }
-                                }
-                                if (match == false) {
-                                    chartData.push({
-                                        date: Time[j],
-                                        host0: $scope.selectedHostnames[0],
-                                        DiskUsed0: 0,
-                                        DiskUsedPercentage0: 0,
+                                        DiskUsed0: diskUsed[j].toFixed(2),
+                                        DiskUsedPercentage0: diskUsedPercentage[j].toFixed(2),
                                         host1: $scope.selectedHostnames[1],
                                         DiskUsed1: 0,
                                         DiskUsedPercentage1: 0,
                                         host2: $scope.selectedHostnames[2],
-                                        DiskUsed2: diskUsed[j],
-                                        DiskUsedPercentage2: diskUsedPercentage[j].toFixed(2)
+                                        DiskUsed2: 0,
+                                        DiskUsedPercentage2: 0
                                     });
-                                } else {
-                                    match = false;
+                                }
+                            }
+                            else if (i == 1){
+                                totalDiskSpace = diskUsed[0] + diskFree[0];
+                                for (j = 0; j < Time.length; j++) {
+                                    diskUsedPercentage[j] = (diskUsed[j]/totalDiskSpace)* 100;
+                                    Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
+                                    for (k = 0; k < chartData.length; k++) {
+                                        if (Time[j] == chartData[k].date) {
+                                            match = true;
+                                            chartData[k].DiskUsed1 = diskUsed[j].toFixed(2);
+                                            chartData[k].DiskUsedPercentage1 = diskUsedPercentage[j].toFixed(2);
+                                            break;
+                                        }
+                                    }
+                                    if (match == false) {
+                                        chartData.push({
+                                            date: Time[j],
+                                            host0: $scope.selectedHostnames[0],
+                                            DiskUsed0: 0,
+                                            DiskUsedPercentage0: 0,
+                                            host1: $scope.selectedHostnames[1],
+                                            DiskUsed1: diskUsed[j].toFixed(2),
+                                            DiskUsedPercentage1: diskUsedPercentage[j].toFixed(2),
+                                            host2: $scope.selectedHostnames[2],
+                                            DiskUsed2: 0,
+                                            DiskUsedPercentage2: 0
+                                        });
+                                    } else {
+                                        match = false;
+                                    }
+                                }
+                            }
+                            else if (i == 2) {
+                                totalDiskSpace = diskUsed[0] + diskFree[0];
+                                for (j = 0; j < Time.length; j++) {
+                                    diskUsedPercentage[j] = (diskUsed[j]/totalDiskSpace)* 100;
+                                    Time[j] = $filter('date')(Time[j],"yyyy-MM-dd HH:mm");
+                                    for (k = 0; k < chartData.length; k++) {
+                                        if (Time[j] == chartData[k].date) {
+                                            match = true;
+                                            chartData[k].DiskUsed2 = diskUsed[j].toFixed(2);
+                                            chartData[k].DiskUsedPercentage2 = diskUsedPercentage[j].toFixed(2);
+                                            break;
+                                        }
+                                    }
+                                    if (match == false) {
+                                        chartData.push({
+                                            date: Time[j],
+                                            host0: $scope.selectedHostnames[0],
+                                            DiskUsed0: 0,
+                                            DiskUsedPercentage0: 0,
+                                            host1: $scope.selectedHostnames[1],
+                                            DiskUsed1: 0,
+                                            DiskUsedPercentage1: 0,
+                                            host2: $scope.selectedHostnames[2],
+                                            DiskUsed2: diskUsed[j].toFixed(2),
+                                            DiskUsedPercentage2: diskUsedPercentage[j].toFixed(2)
+                                        });
+                                    } else {
+                                        match = false;
+                                    }
                                 }
                             }
                         }
                     }
-                }
-                $scope.showGraph = true;
-                chart.dataProvider = chartData;
-                chart.validateData();
-            });
+                    $scope.showGraph = true;
+                    chart.dataProvider = chartData;
+                    chart.validateData();
+                });
+            }
         };
 
         $scope.hideTheGraph = function () {
