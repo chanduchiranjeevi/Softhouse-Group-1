@@ -25,15 +25,15 @@ public class DiskUsage {
 
     @JsonProperty
     @NotNull
-    private Integer kbDiskAvailable;
+    private Float kbDiskAvailable;
 
     @JsonProperty
     @NotNull
-    private Integer kbDiskUsed;
+    private Float kbDiskUsed;
 
     public DiskUsage() {}
 
-    public DiskUsage(Integer id, String hostName, Date time, Integer kbDiskAvailable, Integer kbDiskUsed) {
+    public DiskUsage(Integer id, String hostName, Date time, Float kbDiskAvailable, Float kbDiskUsed) {
         this.id = id;
         this.time = time;
         this.hostName = hostName;
@@ -65,19 +65,19 @@ public class DiskUsage {
         this.time = time;
     }
 
-    public Integer getKbDiskAvailable() {
+    public Float getKbDiskAvailable() {
         return kbDiskAvailable;
     }
 
-    public void setKbDiskAvailable(Integer kbDiskAvailable) {
+    public void setKbDiskAvailable(Float kbDiskAvailable) {
         this.kbDiskAvailable = kbDiskAvailable;
     }
 
-    public Integer getKbDiskUsed() {
+    public Float getKbDiskUsed() {
         return kbDiskUsed;
     }
 
-    public void setKbDiskUsed(Integer kbDiskUsed) {
+    public void setKbDiskUsed(Float kbDiskUsed) {
         this.kbDiskUsed = kbDiskUsed;
     }
 

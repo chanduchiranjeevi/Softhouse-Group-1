@@ -25,15 +25,15 @@ public class MemoryUsage {
 
     @JsonProperty
     @NotNull
-    private Integer kbMemoryFree;
+    private Float kbMemoryFree;
 
     @JsonProperty
     @NotNull
-    private Integer kbMemoryUsed;
+    private Float kbMemoryUsed;
 
     public MemoryUsage() {}
 
-    public MemoryUsage(Integer id, String hostName, Date time, Integer kbMemoryFree, Integer kbMemoryUsed) {
+    public MemoryUsage(Integer id, String hostName, Date time, Float kbMemoryFree, Float kbMemoryUsed) {
         this.id = id;
         this.time = time;
         this.hostName = hostName;
@@ -65,19 +65,19 @@ public class MemoryUsage {
         this.time = time;
     }
 
-    public Integer getKbMemoryFree() {
+    public Float getKbMemoryFree() {
         return kbMemoryFree;
     }
 
-    public void setKbMemoryFree(Integer kbMemoryFree) {
+    public void setKbMemoryFree(Float kbMemoryFree) {
         this.kbMemoryFree = kbMemoryFree;
     }
 
-    public Integer getKbMemoryUsed() {
+    public Float getKbMemoryUsed() {
         return kbMemoryUsed;
     }
 
-    public void setKbMemoryUsed(Integer kbMemoryUsed) {
+    public void setKbMemoryUsed(Float kbMemoryUsed) {
         this.kbMemoryUsed = kbMemoryUsed;
     }
 

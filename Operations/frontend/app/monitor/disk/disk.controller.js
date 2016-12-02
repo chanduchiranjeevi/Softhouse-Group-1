@@ -218,19 +218,19 @@ angular.module('app')
                 "lineAlpha": 0.5,
                 "title": "Disk Used",
                 "valueField": "DiskUsedPercentage0",
-                "balloonText": "<div style='margin:5px; font-size:12px;'>Host Name:<b>[[host0]]</b></div><br><div style='margin:5px; font-size:12px;'>Disk Used:<b>[[DiskUsed0]]kB, ([[value]]%)</b></div>"
+                "balloonText": "<div style='margin:5px; font-size:12px;'>Host Name:<b>[[host0]]</b></div><br><div style='margin:5px; font-size:12px;'>Disk Used:<b>[[DiskUsed0]]GB, ([[value]]%)</b></div>"
             },{
                 "fillAlphas": 0.5,
                 "lineAlpha": 0.5,
                 "title": "Disk Used",
                 "valueField": "DiskUsedPercentage1",
-                "balloonText": "<div style='margin:5px; font-size:12px;'>Host Name:<b>[[host1]]</b></div><br><div style='margin:5px; font-size:12px;'>Disk Used:<b>[[DiskUsed1]]kB, ([[value]]%)</b></div>"
+                "balloonText": "<div style='margin:5px; font-size:12px;'>Host Name:<b>[[host1]]</b></div><br><div style='margin:5px; font-size:12px;'>Disk Used:<b>[[DiskUsed1]]GB, ([[value]]%)</b></div>"
             },{
                 "fillAlphas": 0.5,
                 "lineAlpha": 0.5,
                 "title": "Disk Used",
                 "valueField": "DiskUsedPercentage2",
-                "balloonText": "<div style='margin:5px; font-size:12px;'>Host Name:<b>[[host2]]</b></div><br><div style='margin:5px; font-size:12px;'>Disk Used:<b>[[DiskUsed2]]kB, ([[value]]%)</b></div>"
+                "balloonText": "<div style='margin:5px; font-size:12px;'>Host Name:<b>[[host2]]</b></div><br><div style='margin:5px; font-size:12px;'>Disk Used:<b>[[DiskUsed2]]GB, ([[value]]%)</b></div>"
             }],
             "chartScrollbar": {
                 "scrollbarHeight": 80,

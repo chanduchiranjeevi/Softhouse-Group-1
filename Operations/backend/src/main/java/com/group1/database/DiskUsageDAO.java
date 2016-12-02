@@ -14,7 +14,7 @@ import java.util.List;
  */
 public interface DiskUsageDAO {
 
-    @SqlUpdate("CREATE TABLE IF NOT EXISTS diskUsage(id int auto_increment primary key, hostName varchar(255), time timestamp, kbDiskAvailable int, kbDiskUsed int)")
+    @SqlUpdate("CREATE TABLE IF NOT EXISTS diskUsage(id int auto_increment primary key, hostName varchar(255), time timestamp, kbDiskAvailable double, kbDiskUsed double)")
     void createTable();
 
     @SqlUpdate("INSERT INTO `diskUsage` VALUES(:id, :hostName, :time, :kbDiskAvailable, :kbDiskUsed)")

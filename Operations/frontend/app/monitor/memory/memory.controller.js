@@ -219,19 +219,19 @@ angular.module('app')
                 "lineAlpha": 0.5,
                 "title": "Memory Used",
                 "valueField": "MemoryUsedPercentage0",
-                "balloonText": "<div style='margin:5px; font-size:12px;'>Host Name:<b>[[host0]]</b></div><br><div style='margin:5px; font-size:12px;'>Memory Used:<b>[[MemoryUsed0]]kB, ([[value]]%)</b></div>"
+                "balloonText": "<div style='margin:5px; font-size:12px;'>Host Name:<b>[[host0]]</b></div><br><div style='margin:5px; font-size:12px;'>Memory Used:<b>[[MemoryUsed0]]GB, ([[value]]%)</b></div>"
             }, {
                 "fillAlphas": 0.5,
                 "lineAlpha": 0.5,
                 "title": "Memory Used",
                 "valueField": "MemoryUsedPercentage1",
-                "balloonText": "<div style='margin:5px; font-size:12px;'>Host Name:<b>[[host1]]</b></div><br><div style='margin:5px; font-size:12px;'>Memory Used:<b>[[MemoryUsed1]]kB, ([[value]]%)</b></div>"
+                "balloonText": "<div style='margin:5px; font-size:12px;'>Host Name:<b>[[host1]]</b></div><br><div style='margin:5px; font-size:12px;'>Memory Used:<b>[[MemoryUsed1]]GB, ([[value]]%)</b></div>"
             }, {
                 "fillAlphas": 0.5,
                 "lineAlpha": 0.5,
                 "title": "Memory Used",
                 "valueField": "MemoryUsedPercentage2",
-                "balloonText": "<div style='margin:5px; font-size:12px;'>Host Name:<b>[[host2]]</b></div><br><div style='margin:5px; font-size:12px;'>Memory Used:<b>[[MemoryUsed2]]kB, ([[value]]%)</b></div>"
+                "balloonText": "<div style='margin:5px; font-size:12px;'>Host Name:<b>[[host2]]</b></div><br><div style='margin:5px; font-size:12px;'>Memory Used:<b>[[MemoryUsed2]]GB, ([[value]]%)</b></div>"
             }],
             "chartScrollbar": {
                 "graph": "g1",
